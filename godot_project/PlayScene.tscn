@@ -4,10 +4,9 @@
 [ext_resource path="res://CameraAnchor.gd" type="Script" id=2]
 [ext_resource path="res://PlayerControl.gd" type="Script" id=3]
 [ext_resource path="res://piggie_material.tres" type="Material" id=4]
+[ext_resource path="res://cubepig.obj" type="ArrayMesh" id=5]
 
 [sub_resource type="SphereShape" id=84]
-
-[sub_resource type="CubeMesh" id=4]
 
 [sub_resource type="PlaneMesh" id=86]
 
@@ -20,7 +19,7 @@
 [node name="Root" type="Spatial"]
 
 [node name="Player" type="RigidBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.117658, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.451022, 0 )
 axis_lock_angular_x = true
 axis_lock_angular_y = true
 axis_lock_angular_z = true
@@ -39,14 +38,18 @@ autostart = true
 transform = Transform( 1, 0, 0, 0, 0.903926, 0.427689, 0, -0.427689, 0.903926, 0, 3, 5 )
 current = true
 
-[node name="CollisionShape" type="CollisionShape" parent="Player"]
-transform = Transform( 0.33, 0, 0, 0, 0.33, 0, 0, 0, 0.33, 0.00156641, 0.508226, -0.00186682 )
-shape = SubResource( 84 )
+[node name="MeshAnchor" type="Spatial" parent="Player"]
+transform = Transform( 0.33, 0, 0, 0, 0.33, 0, 0, 0, 0.33, 0, 0, 0 )
 
-[node name="MeshInstance" type="MeshInstance" parent="Player"]
-transform = Transform( 0.33, 0, 0, 0, 0.33, 0, 0, 0, 0.33, 0, 0.5, 0 )
-mesh = SubResource( 4 )
+[node name="MeshInstance" type="MeshInstance" parent="Player/MeshAnchor"]
+transform = Transform( -8.56817e-08, 0, 2, 0, 2, 0, -2, 0, -8.56817e-08, 0.980695, -1.10348, -0.856853 )
+mesh = ExtResource( 5 )
+skeleton = NodePath("../..")
 material/0 = ExtResource( 4 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Player"]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0 )
+shape = SubResource( 84 )
 
 [node name="Ground" type="RigidBody" parent="."]
 mode = 1

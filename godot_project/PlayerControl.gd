@@ -13,8 +13,8 @@ func _physics_process(delta):
 	add_central_force(heading * speed * accel)
 	
 	if linear_velocity.length_squared() > velocity_margin:
-		$MeshInstance.look_at(
-			$MeshInstance.global_transform.origin + linear_velocity,
+		$MeshAnchor.look_at(
+			$MeshAnchor.global_transform.origin + linear_velocity,
 			Vector3.UP
 		)
 
