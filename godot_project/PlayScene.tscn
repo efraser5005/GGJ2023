@@ -86,7 +86,6 @@ omni_range = 28.9709
 
 [node name="DugUpPanel" type="Panel" parent="."]
 pause_mode = 2
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 100.0
@@ -124,11 +123,9 @@ valign = 2
 
 [node name="KeepDiggingButton" type="Button" parent="DugUpPanel/VBoxContainer"]
 pause_mode = 2
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -100.0
 margin_top = 349.0
-margin_right = 100.0
+margin_right = 824.0
+margin_bottom = 381.0
 custom_fonts/font = ExtResource( 9 )
 text = "Keep Digging"
 
