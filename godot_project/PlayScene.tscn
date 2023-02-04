@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://island/texture_0.png" type="Texture" id=1]
 [ext_resource path="res://CameraAnchor.gd" type="Script" id=2]
@@ -17,6 +17,8 @@
 [ext_resource path="res://islandprops/bridge/bridge.obj" type="ArrayMesh" id=15]
 [ext_resource path="res://islandprops/bridge/texture_0.png" type="Texture" id=16]
 [ext_resource path="res://materials/water_shader.tres" type="Material" id=17]
+[ext_resource path="res://islandprops/billboards/cattail.png" type="Texture" id=18]
+[ext_resource path="res://islandprops/billboards/Grassbunch.tscn" type="PackedScene" id=19]
 
 [sub_resource type="SphereShape" id=84]
 
@@ -100,6 +102,230 @@ physics_material_override = ExtResource( 12 )
 [node name="CollisionShape" type="CollisionShape" parent="LevelGeometry/Island/StaticBody"]
 shape = SubResource( 93 )
 
+[node name="CattailBillboards" type="Spatial" parent="LevelGeometry/Island"]
+
+[node name="Cattail1" type="Sprite3D" parent="LevelGeometry/Island/CattailBillboards"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.44062, 1.77132, 0 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail2" type="Sprite3D" parent="LevelGeometry/Island/CattailBillboards"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.14735, 1.64795, -1.3707 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail3" type="Sprite3D" parent="LevelGeometry/Island/CattailBillboards"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.43619, 1.57807, 1.21817 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail4" type="Sprite3D" parent="LevelGeometry/Island/CattailBillboards"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.10923, 1.76158, 2.85287 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail5" type="Sprite3D" parent="LevelGeometry/Island/CattailBillboards"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.10923, 1.46106, -2.95874 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail16" type="Sprite3D" parent="LevelGeometry/Island/CattailBillboards"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.84094, 1.74459, 4.65693 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail21" type="Sprite3D" parent="LevelGeometry/Island/CattailBillboards"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.1956, 1.1768, -2.56243 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail22" type="Sprite3D" parent="LevelGeometry/Island/CattailBillboards"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.1956, 1.36745, -4.67574 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail23" type="Sprite3D" parent="LevelGeometry/Island/CattailBillboards"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.47996, 1.73168, -4.67574 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail24" type="Sprite3D" parent="LevelGeometry/Island/CattailBillboards"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.75225, 1.73168, -1.86002 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail25" type="Sprite3D" parent="LevelGeometry/Island/CattailBillboards"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.38535, 1.99037, -1.4834 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail17" type="Sprite3D" parent="LevelGeometry/Island/CattailBillboards"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.84094, 1.89131, 6.54672 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail18" type="Sprite3D" parent="LevelGeometry/Island/CattailBillboards"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.19032, 1.89131, 6.54672 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail19" type="Sprite3D" parent="LevelGeometry/Island/CattailBillboards"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.19032, 2.01907, 8.80758 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail20" type="Sprite3D" parent="LevelGeometry/Island/CattailBillboards"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.09518, 2.01907, 8.80758 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail6" type="Sprite3D" parent="LevelGeometry/Island/CattailBillboards"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.31245, 1.46106, -2.60812 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail7" type="Sprite3D" parent="LevelGeometry/Island/CattailBillboards"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.63606, 1.47321, -3.08423 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail8" type="Sprite3D" parent="LevelGeometry/Island/CattailBillboards"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.74815, 1.59595, -2.07666 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail9" type="Sprite3D" parent="LevelGeometry/Island/CattailBillboards"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.24811, 1.52369, -1.81608 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail10" type="Sprite3D" parent="LevelGeometry/Island/CattailBillboards"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.24811, 1.78264, -0.386115 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail11" type="Sprite3D" parent="LevelGeometry/Island/CattailBillboards"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.05247, 1.77088, -0.923292 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail26" type="Sprite3D" parent="LevelGeometry/Island/CattailBillboards"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.40661, 1.77088, 0.197751 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail12" type="Sprite3D" parent="LevelGeometry/Island/CattailBillboards"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.92046, 1.62027, -3.8713 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail13" type="Sprite3D" parent="LevelGeometry/Island/CattailBillboards"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.57645, 1.78264, 0.378084 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail14" type="Sprite3D" parent="LevelGeometry/Island/CattailBillboards"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.02427, 1.78264, -0.837033 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail15" type="Sprite3D" parent="LevelGeometry/Island/CattailBillboards"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.07992, 1.81638, 1.47248 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="GrassBillboards" type="Spatial" parent="LevelGeometry/Island"]
+
+[node name="Grassbunch" parent="LevelGeometry/Island/GrassBillboards" instance=ExtResource( 19 )]
+transform = Transform( 0.988282, -0.152639, 0.000263673, 0.152633, 0.988218, -0.011289, 0.00146257, 0.0111969, 0.999936, 0, 1.59993, 3.40868 )
+
+[node name="Grassbunch2" parent="LevelGeometry/Island/GrassBillboards" instance=ExtResource( 19 )]
+transform = Transform( 0.988282, -0.152639, 0.000263673, 0.152633, 0.988218, -0.011289, 0.00146257, 0.0111969, 0.999936, -4.7668, 0.802739, 2.15605 )
+
+[node name="Grassbunch3" parent="LevelGeometry/Island/GrassBillboards" instance=ExtResource( 19 )]
+transform = Transform( 0.246989, 0.0719416, 0.966344, -0.241506, 0.970342, -0.0105123, -0.938441, -0.230782, 0.257039, 4.2283, 1.49813, 2.15605 )
+
+[node name="Grassbunch4" parent="LevelGeometry/Island/GrassBillboards" instance=ExtResource( 19 )]
+transform = Transform( 0.247388, 0.0507241, 0.967588, -0.0161346, 0.998706, -0.0482302, -0.968782, -0.00368006, 0.247887, 4.2283, 1.37041, 7.87233 )
+
 [node name="Island2" type="MeshInstance" parent="LevelGeometry"]
 transform = Transform( -5.46392e-08, 0, 1.25, 0, 1.25, 0, -1.25, 0, -5.46392e-08, 2.21029, -2.02863, -25.5592 )
 mesh = ExtResource( 14 )
@@ -110,6 +336,260 @@ material/0 = SubResource( 99 )
 
 [node name="CollisionShape" type="CollisionShape" parent="LevelGeometry/Island2/StaticBody"]
 shape = SubResource( 98 )
+
+[node name="CattailBillboards" type="Spatial" parent="LevelGeometry/Island2"]
+transform = Transform( 0.551253, 0, -0.834338, 0, 1, 0, 0.834338, 0, 0.551253, 1.43867, 0.879757, 0.414833 )
+
+[node name="Cattail1" type="Sprite3D" parent="LevelGeometry/Island2/CattailBillboards"]
+transform = Transform( 1, 0, 2.68221e-07, 0, 1, 0, -2.68221e-07, 0, 1, -7.8611, 0.654278, -2.25993 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail2" type="Sprite3D" parent="LevelGeometry/Island2/CattailBillboards"]
+transform = Transform( 1, 0, 2.68221e-07, 0, 1, 0, -2.68221e-07, 0, 1, -4.06107, 0.540165, -7.20334 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail3" type="Sprite3D" parent="LevelGeometry/Island2/CattailBillboards"]
+transform = Transform( 1, 0, 2.68221e-07, 0, 1, 0, -2.68221e-07, 0, 1, -7.68829, 0.570231, -0.269796 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail4" type="Sprite3D" parent="LevelGeometry/Island2/CattailBillboards"]
+transform = Transform( 1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, 1, -6.10923, 1.01163, 2.85288 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail5" type="Sprite3D" parent="LevelGeometry/Island2/CattailBillboards"]
+transform = Transform( 1, 0, 1.49012e-07, 0, 1, 0, -1.49012e-07, 0, 1, -6.46595, 0.609777, -3.85552 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail16" type="Sprite3D" parent="LevelGeometry/Island2/CattailBillboards"]
+transform = Transform( 1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, 1, 5.84094, 0.741724, 4.65693 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail21" type="Sprite3D" parent="LevelGeometry/Island2/CattailBillboards"]
+transform = Transform( 1, 0, 1.49012e-07, 0, 1, 0, -1.49012e-07, 0, 1, 7.95673, 0.867286, -2.2965 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail22" type="Sprite3D" parent="LevelGeometry/Island2/CattailBillboards"]
+transform = Transform( 1, 0, 1.49012e-07, 0, 1, 0, -1.49012e-07, 0, 1, 7.44451, 0.766183, -3.64356 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail23" type="Sprite3D" parent="LevelGeometry/Island2/CattailBillboards"]
+transform = Transform( 1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, 1, 4.47997, 0.688095, -4.67574 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail24" type="Sprite3D" parent="LevelGeometry/Island2/CattailBillboards"]
+transform = Transform( 1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, 1, 2.75226, 0.893065, -1.86002 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail25" type="Sprite3D" parent="LevelGeometry/Island2/CattailBillboards"]
+transform = Transform( 1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, 1, 1.38535, 0.748788, -1.4834 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail17" type="Sprite3D" parent="LevelGeometry/Island2/CattailBillboards"]
+transform = Transform( 1, 0, 4.17233e-07, 0, 1, 0, -4.17233e-07, 0, 1, 5.4802, 0.640361, 6.87385 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail18" type="Sprite3D" parent="LevelGeometry/Island2/CattailBillboards"]
+transform = Transform( 1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, 1, 4.19032, 0.488278, 6.54672 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail19" type="Sprite3D" parent="LevelGeometry/Island2/CattailBillboards"]
+transform = Transform( 1, 0, 2.68221e-07, 0, 1, 0, -2.68221e-07, 0, 1, 4.63031, 0.62308, 6.0192 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail20" type="Sprite3D" parent="LevelGeometry/Island2/CattailBillboards"]
+transform = Transform( 1, 0, 4.17233e-07, 0, 1, 0, -4.17233e-07, 0, 1, 3.07949, 0.654998, 6.28374 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail27" type="Sprite3D" parent="LevelGeometry/Island2/CattailBillboards"]
+transform = Transform( 0.344626, 0, 0.938742, 0, 1, 0, -0.938742, 0, 0.344626, -5.13675, 0.897885, 6.40033 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail28" type="Sprite3D" parent="LevelGeometry/Island2/CattailBillboards"]
+transform = Transform( 0.344626, 0, 0.938742, 0, 1, 0, -0.938742, 0, 0.344626, -5.88838, 0.889994, 7.49847 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail29" type="Sprite3D" parent="LevelGeometry/Island2/CattailBillboards"]
+transform = Transform( 0.344626, 0, 0.938742, 0, 1, 0, -0.938742, 0, 0.344626, -6.23195, 0.937439, 6.90363 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail30" type="Sprite3D" parent="LevelGeometry/Island2/CattailBillboards"]
+transform = Transform( 0.344626, 0, 0.938742, 0, 1, 0, -0.938742, 0, 0.344626, -6.51807, 0.63475, 8.45062 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail6" type="Sprite3D" parent="LevelGeometry/Island2/CattailBillboards"]
+transform = Transform( 1, 0, 3.8743e-07, 0, 1, 0, -3.8743e-07, 0, 1, -5.50466, 0.72796, -5.2815 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail7" type="Sprite3D" parent="LevelGeometry/Island2/CattailBillboards"]
+transform = Transform( 1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, 1, -6.31316, 0.636628, -3.205 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail8" type="Sprite3D" parent="LevelGeometry/Island2/CattailBillboards"]
+transform = Transform( 1, 0, 1.49012e-07, 0, 1, 0, -1.49012e-07, 0, 1, -6.745, 0.953261, 0.0944653 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail9" type="Sprite3D" parent="LevelGeometry/Island2/CattailBillboards"]
+transform = Transform( 1, 0, 1.49012e-07, 0, 1, 0, -1.49012e-07, 0, 1, -6.76772, 0.893043, -2.34696 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail10" type="Sprite3D" parent="LevelGeometry/Island2/CattailBillboards"]
+transform = Transform( 1, 0, 1.49012e-07, 0, 1, 0, -1.49012e-07, 0, 1, -7.63303, 0.66004, -1.30114 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail11" type="Sprite3D" parent="LevelGeometry/Island2/CattailBillboards"]
+transform = Transform( 1, 0, 4.17233e-07, 0, 1, 0, -4.17233e-07, 0, 1, -8.66882, 0.770067, -1.22145 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail26" type="Sprite3D" parent="LevelGeometry/Island2/CattailBillboards"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.40661, 1.77088, 0.197751 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail12" type="Sprite3D" parent="LevelGeometry/Island2/CattailBillboards"]
+transform = Transform( 1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, 1, -7.08212, 0.480184, -3.86255 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail13" type="Sprite3D" parent="LevelGeometry/Island2/CattailBillboards"]
+transform = Transform( 1, 0, 1.49012e-07, 0, 1, 0, -1.49012e-07, 0, 1, -8.19049, 0.626256, -1.34904 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail14" type="Sprite3D" parent="LevelGeometry/Island2/CattailBillboards"]
+transform = Transform( 1, 0, 1.49012e-07, 0, 1, 0, -1.49012e-07, 0, 1, -8.06674, 0.592736, 0.9562 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="Cattail15" type="Sprite3D" parent="LevelGeometry/Island2/CattailBillboards"]
+transform = Transform( 1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, 1, -6.07992, 1.28395, 1.47248 )
+cast_shadow = 0
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 18 )
+
+[node name="GrassBillboards" type="Spatial" parent="LevelGeometry/Island2"]
+
+[node name="Grassbunch" parent="LevelGeometry/Island2/GrassBillboards" instance=ExtResource( 19 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19812, 0.906126, 7.88535 )
+
+[node name="Grassbunch2" parent="LevelGeometry/Island2/GrassBillboards" instance=ExtResource( 19 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.20754, 1.0017, -0.884925 )
+
+[node name="Grassbunch3" parent="LevelGeometry/Island2/GrassBillboards" instance=ExtResource( 19 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.37348, 0.89939, -4.07166 )
 
 [node name="Bridge" type="MeshInstance" parent="LevelGeometry"]
 transform = Transform( -3.27835e-08, 0, 0.75, 0, 0.75, 0, -0.75, 0, -3.27835e-08, 7.63798, -1.84853, -11.6168 )
