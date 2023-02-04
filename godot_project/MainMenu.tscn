@@ -77,7 +77,6 @@ custom_fonts/font = ExtResource( 1 )
 text = "Root Pig"
 
 [node name="CreditsPanel" type="Panel" parent="."]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 200.0
@@ -93,11 +92,13 @@ margin_right = 40.0
 margin_bottom = 51.0
 theme = ExtResource( 2 )
 text = "Credits
-
-Art:
-Music:
+Art: Olive Perry
+Music: Rhody Andester
 Programming:
-Design:"
+    Jane Lewis
+    Louis Webb
+    Esther Fraser
+Designed together for GGJ 2023"
 
 [connection signal="pressed" from="VBoxContainer/NewGameButton" to="." method="_on_NewGameButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/ResumeGameButton" to="." method="_on_ResumeGameButton_pressed"]
