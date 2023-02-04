@@ -15,12 +15,6 @@ func _ready():
 #func _process(delta):
 #	pass
 
-
-func _show_credits():
-	self.show()
-	
-	
-	
 func _input(event):
 	if event.is_action_pressed("ui_cancel"):
 		self.hide()

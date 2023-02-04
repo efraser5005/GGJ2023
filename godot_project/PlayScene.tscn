@@ -1,12 +1,15 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://ground_material.tres" type="Material" id=1]
 [ext_resource path="res://CameraAnchor.gd" type="Script" id=2]
 [ext_resource path="res://PlayerControl.gd" type="Script" id=3]
 [ext_resource path="res://piggie_material.tres" type="Material" id=4]
 [ext_resource path="res://cubepig.obj" type="ArrayMesh" id=5]
-[ext_resource path="res://Dig.gd" type="Script" id=6]
+[ext_resource path="res://main_menu_theme.tres" type="Theme" id=6]
+[ext_resource path="res://cube_pig_headshot.png" type="Texture" id=7]
 [ext_resource path="res://JumpStomp.tres" type="Animation" id=8]
+[ext_resource path="res://font/menu_font_20.tres" type="DynamicFont" id=9]
+[ext_resource path="res://DugUpPanel.gd" type="Script" id=10]
 
 [sub_resource type="SphereShape" id=84]
 
@@ -108,6 +111,48 @@ script = ExtResource( 6 )
 
 [node name="Spatial" type="Spatial" parent="Dig Points"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.20023 )
+
+[node name="DugUpPanel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 100.0
+margin_top = 100.0
+margin_right = -100.0
+margin_bottom = -100.0
+script = ExtResource( 10 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DugUpPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 25.0
+margin_top = 25.0
+margin_right = -25.0
+margin_bottom = -25.0
+theme = ExtResource( 6 )
+custom_constants/separation = 5
+
+[node name="ItemImage" type="TextureRect" parent="DugUpPanel/VBoxContainer"]
+margin_right = 774.0
+margin_bottom = 352.0
+texture = ExtResource( 7 )
+
+[node name="ItemTextLabel" type="Label" parent="DugUpPanel/VBoxContainer"]
+margin_top = 357.0
+margin_right = 774.0
+margin_bottom = 383.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = ExtResource( 9 )
+text = "This is some text for an image"
+align = 1
+valign = 2
+
+[node name="KeepDiggingButton" type="Button" parent="DugUpPanel/VBoxContainer"]
+margin_top = 388.0
+margin_right = 774.0
+margin_bottom = 420.0
+custom_fonts/font = ExtResource( 9 )
+text = "Keep Digging"
 
 [connection signal="animation_finished" from="Player/AnimationPlayer" to="Player" method="_on_animation_finished"]
 [connection signal="animation_started" from="Player/AnimationPlayer" to="Player" method="_on_animation_started"]
