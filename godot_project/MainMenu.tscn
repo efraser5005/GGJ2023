@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://font/menu_font_60.tres" type="DynamicFont" id=1]
 [ext_resource path="res://main_menu_theme.tres" type="Theme" id=2]
 [ext_resource path="res://cube_pig_headshot.png" type="Texture" id=3]
 [ext_resource path="res://CreditsPanel.gd" type="Script" id=4]
 [ext_resource path="res://MainMenu.gd" type="Script" id=5]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.929412, 0.631373, 0.933333, 1 )
 
 [node name="MainMenu" type="Control"]
 pause_mode = 2
@@ -76,23 +79,35 @@ margin_bottom = 100.0
 custom_fonts/font = ExtResource( 1 )
 text = "Root Pig"
 
-[node name="CreditsPanel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 200.0
-margin_top = 100.0
-margin_right = -200.0
-margin_bottom = -100.0
-rect_min_size = Vector2( 200, 200 )
+margin_left = 100.0
+margin_top = 50.0
+margin_right = -100.0
+margin_bottom = -50.0
 theme = ExtResource( 2 )
+custom_styles/panel = SubResource( 1 )
 script = ExtResource( 4 )
 
-[node name="Label" type="Label" parent="CreditsPanel"]
+[node name="CreditsPanel" type="Panel" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 25.0
+margin_top = 25.0
+margin_right = -25.0
+margin_bottom = -25.0
+rect_min_size = Vector2( 200, 200 )
+theme = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="Panel/CreditsPanel"]
 margin_right = 40.0
 margin_bottom = 51.0
 theme = ExtResource( 2 )
 text = "Credits
-Art: Olive Perry
+
+Art & Level Design: Olive Perry
 Music: Rhody Andester
 Programming:
     Jane Lewis
@@ -102,5 +117,5 @@ Designed together for GGJ 2023"
 
 [connection signal="pressed" from="VBoxContainer/NewGameButton" to="." method="_on_NewGameButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/ResumeGameButton" to="." method="_on_ResumeGameButton_pressed"]
-[connection signal="pressed" from="VBoxContainer/CreditsButton" to="CreditsPanel" method="_show_credits"]
+[connection signal="pressed" from="VBoxContainer/CreditsButton" to="Panel" method="_show_credits"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
