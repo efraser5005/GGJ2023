@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cubepig.png-ab54269dd88a9f5ae2af27f173d70342.stex"
+path="res://.import/texture_1.png-ddbec43d4bb18ce32ec6d429ffc245f9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cubepig.png"
-dest_files=[ "res://.import/cubepig.png-ab54269dd88a9f5ae2af27f173d70342.stex" ]
+source_file="res://island2/texture_1.png"
+dest_files=[ "res://.import/texture_1.png-ddbec43d4bb18ce32ec6d429ffc245f9.stex" ]
 
 [params]
 

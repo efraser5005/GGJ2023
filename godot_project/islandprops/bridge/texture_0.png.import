@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cubepig.png-ab54269dd88a9f5ae2af27f173d70342.stex"
+path="res://.import/texture_0.png-501d3efc261c5e4b04696c06c8c602bf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cubepig.png"
-dest_files=[ "res://.import/cubepig.png-ab54269dd88a9f5ae2af27f173d70342.stex" ]
+source_file="res://islandprops/bridge/texture_0.png"
+dest_files=[ "res://.import/texture_0.png-501d3efc261c5e4b04696c06c8c602bf.stex" ]
 
 [params]
 
