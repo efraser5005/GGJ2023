@@ -16,11 +16,15 @@ func _ready():
 #	pass
 
 
-func _show_credits():
-	self.show()
-	
-	
-	
 func _input(event):
 	if event.is_action_pressed("ui_cancel"):
 		self.hide()
+	if event.is_action_pressed("ui_page_down"):
+		self.show()
+		get_tree().paused = true
+
+
+
+func _on_KeepDiggingButton_pressed():
+	self.hide()
+	get_tree().paused = false
