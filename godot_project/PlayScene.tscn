@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://ground_material.tres" type="Material" id=1]
 [ext_resource path="res://CameraAnchor.gd" type="Script" id=2]
 [ext_resource path="res://PlayerControl.gd" type="Script" id=3]
 [ext_resource path="res://piggie_material.tres" type="Material" id=4]
 [ext_resource path="res://cubepig.obj" type="ArrayMesh" id=5]
+[ext_resource path="res://JumpStomp.tres" type="Animation" id=8]
 
 [sub_resource type="SphereShape" id=84]
 
@@ -41,15 +42,20 @@ current = true
 [node name="MeshAnchor" type="Spatial" parent="Player"]
 transform = Transform( 0.33, 0, 0, 0, 0.33, 0, 0, 0, 0.33, 0, 0, 0 )
 
-[node name="MeshInstance" type="MeshInstance" parent="Player/MeshAnchor"]
+[node name="MeshAnimationAnchor" type="Spatial" parent="Player/MeshAnchor"]
+
+[node name="MeshInstance" type="MeshInstance" parent="Player/MeshAnchor/MeshAnimationAnchor"]
 transform = Transform( -8.56817e-08, 0, 2, 0, 2, 0, -2, 0, -8.56817e-08, 0.980695, -1.10348, -0.856853 )
 mesh = ExtResource( 5 )
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 material/0 = ExtResource( 4 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Player"]
 transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0 )
 shape = SubResource( 84 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
+anims/JumpStomp = ExtResource( 8 )
 
 [node name="Ground" type="RigidBody" parent="."]
 mode = 1
@@ -95,3 +101,6 @@ light_color = Color( 0.992157, 0.976471, 1, 1 )
 light_indirect_energy = 16.0
 shadow_enabled = true
 omni_range = 28.9709
+
+[connection signal="animation_finished" from="Player/AnimationPlayer" to="Player" method="_on_animation_finished"]
+[connection signal="animation_started" from="Player/AnimationPlayer" to="Player" method="_on_animation_started"]

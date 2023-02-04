@@ -4,10 +4,15 @@ var speed = 3.5
 var accel = 4
 var velocity_margin = 0.1
 
+var is_jumping = false
+
 func _ready():
 	linear_damp = 2
 
 func _physics_process(delta):
+	if is_jumping:
+		return
+	
 	var heading = determine_heading()
 	
 	add_central_force(heading * speed * accel)
@@ -19,7 +24,12 @@ func _physics_process(delta):
 		)
 
 func _integrate_forces(state):
+	if is_jumping:
+		state.linear_velocity = Vector3()
+		return
+	
 	state.linear_velocity = state.linear_velocity.limit_length(speed)
+
 
 func determine_heading():
 	var camera_to_player = global_transform.origin - $CameraAnchor/Camera.global_transform.origin
@@ -45,7 +55,25 @@ func determine_heading():
 	return heading.normalized()
 
 func _input(event):
+	if is_jumping:
+		return
+		
 	if event.is_action_pressed("ui_rotate_left"):
 		$CameraAnchor.rotate_camera(-1)
 	elif event.is_action_pressed("ui_rotate_right"):
 		$CameraAnchor.rotate_camera(1)
+	elif event.is_action_pressed("ui_accept"):
+		$AnimationPlayer.play("JumpStomp")
+		
+
+
+func _on_animation_started(anim_name):
+	if anim_name == "JumpStomp":
+		is_jumping = true
+	else:
+		is_jumping = false
+
+
+func _on_animation_finished(anim_name):
+	if anim_name == "JumpStomp":
+		is_jumping = false
