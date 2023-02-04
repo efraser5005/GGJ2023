@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://font/OinkText.tres" type="DynamicFont" id=1]
+[ext_resource path="res://TextPopup.gd" type="Script" id=2]
+
+[node name="Position2D" type="Position2D"]
+script = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_right = 56.0
+margin_bottom = 37.0
+custom_fonts/font = ExtResource( 1 )
+align = 1
+valign = 1
+
+[node name="Tween" type="Tween" parent="."]
