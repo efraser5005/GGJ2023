@@ -638,6 +638,7 @@ omni_range = 263.099
 
 [node name="DugUpPanel" type="Panel" parent="."]
 pause_mode = 2
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 100.0
