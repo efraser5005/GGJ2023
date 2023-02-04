@@ -95,3 +95,5 @@ light_color = Color( 0.992157, 0.976471, 1, 1 )
 light_indirect_energy = 16.0
 shadow_enabled = true
 omni_range = 28.9709
+
+[node name="Dig Points" type="Node" parent="."]
