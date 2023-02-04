@@ -45,7 +45,7 @@ func checkDistance(playerLocation):
 	var closest
 	for point in digPoints.get_children():
 		var translate = point.global_translate()
-		var translate2d = Vector2(translate.x, translate.y)
+		var translate2d = Vector2(translate.x, translate.z)
 		var distance = playerLocation.distance_to(translate2d)
 		if closest == null or distance < closest:
 			closest = distance
