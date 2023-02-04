@@ -8,6 +8,9 @@ var is_jumping = false
 
 func _ready():
 	linear_damp = 2
+	var bus = get_node("/root/SignalBus")
+	print(bus, SignalBus)
+	SignalBus.connect("dig_return", self, "dig")
 
 func _physics_process(delta):
 	if is_jumping:
@@ -53,6 +56,10 @@ func determine_heading():
 		heading += right
 	
 	return heading.normalized()
+	
+func dig(canDig, oinkMsg):
+	print(canDig, oinkMsg)
+	pass
 
 func _input(event):
 	if is_jumping:
@@ -64,6 +71,7 @@ func _input(event):
 		$CameraAnchor.rotate_camera(1)
 	elif event.is_action_pressed("ui_accept"):
 		$AnimationPlayer.play("JumpStomp")
+		SignalBus.emit_signal("attempt_dig", global_translation)
 		
 
 

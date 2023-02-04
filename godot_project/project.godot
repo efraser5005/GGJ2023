@@ -14,6 +14,10 @@ config/name="Godot Test"
 run/main_scene="res://PlayScene.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+SignalBus="*res://SignalBus.gd"
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true

@@ -1,11 +1,9 @@
 extends Node
 
-var digPoints
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	digPoints = get_node("Dig Points")
-	
+	SignalBus.connect("attempt_dig", self, "attemptDig")
+
 enum DISTANCE {HIT, VERYCLOSE, CLOSE, DISTANT, NOTHING}
 	
 # Get a stepped discrete value depending on distance
@@ -37,10 +35,20 @@ func oink(distance):
 	
 func checkDistance(playerLocation):
 	var closest
-	for point in digPoints.get_children():
-		var translate = point.global_translate()
+	for point in get_children():
+		var translate = point.global_translation
 		var translate2d = Vector2(translate.x, translate.z)
 		var distance = playerLocation.distance_to(translate2d)
 		if closest == null or distance < closest:
 			closest = distance
 	return closest
+	
+	
+func attemptDig(playerLocation):
+	var playerLocation2D = Vector2(playerLocation.x, playerLocation.z)
+	var distance = checkDistance(playerLocation2D)
+	if distance == null:
+		return
+	var oink = oink(distance)
+	var hitSomething = stepDistance(distance) == DISTANCE.HIT
+	SignalBus.emit_signal("dig_return", [hitSomething, oink])

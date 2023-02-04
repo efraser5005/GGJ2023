@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://ground_material.tres" type="Material" id=1]
 [ext_resource path="res://CameraAnchor.gd" type="Script" id=2]
 [ext_resource path="res://PlayerControl.gd" type="Script" id=3]
 [ext_resource path="res://piggie_material.tres" type="Material" id=4]
 [ext_resource path="res://cubepig.obj" type="ArrayMesh" id=5]
+[ext_resource path="res://Dig.gd" type="Script" id=6]
 [ext_resource path="res://JumpStomp.tres" type="Animation" id=8]
 
 [sub_resource type="SphereShape" id=84]
@@ -103,6 +104,10 @@ shadow_enabled = true
 omni_range = 28.9709
 
 [node name="Dig Points" type="Node" parent="."]
+script = ExtResource( 6 )
+
+[node name="Spatial" type="Spatial" parent="Dig Points"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.20023 )
 
 [connection signal="animation_finished" from="Player/AnimationPlayer" to="Player" method="_on_animation_finished"]
 [connection signal="animation_started" from="Player/AnimationPlayer" to="Player" method="_on_animation_started"]
