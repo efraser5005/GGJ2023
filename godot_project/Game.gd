@@ -25,7 +25,7 @@ func _on_MainMenu_new_game():
 	add_child(PlayScene.instance())
 	$MainMenu.hide()
 	get_tree().paused = false
-	
+
 func _on_MainMenu_resume_game():
 	$MainMenu.hide()
 	get_tree().paused = false
@@ -37,4 +37,4 @@ func _input(event):
 		if existing_scene:
 			$MainMenu.show_resume_game_button()
 		$MainMenu.show()
-	
+
