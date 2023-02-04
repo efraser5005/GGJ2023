@@ -109,6 +109,7 @@ omni_range = 28.9709
 [node name="Dig Points" type="Node" parent="."]
 
 [node name="DugUpPanel" type="Panel" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 100.0
@@ -144,6 +145,7 @@ align = 1
 valign = 2
 
 [node name="KeepDiggingButton" type="Button" parent="DugUpPanel/VBoxContainer"]
+pause_mode = 2
 margin_top = 388.0
 margin_right = 774.0
 margin_bottom = 420.0

@@ -19,6 +19,9 @@ func _ready():
 func _input(event):
 	if event.is_action_pressed("ui_cancel"):
 		self.hide()
+	if event.is_action_pressed("ui_page_down"):
+		self.show()
+		get_tree().paused = true
 
 
 
