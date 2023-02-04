@@ -3,14 +3,23 @@ extends RigidBody
 var speed = 3.5
 var accel = 4
 var velocity_margin = 0.1
+var return_to_spawn_depth = -3
 
 var is_jumping = false
 
 func _ready():
 	linear_damp = 2
+	return_to_spawn_point()
+	
+func return_to_spawn_point():
+	global_transform = get_node("../SpawnPoint").global_transform
 
 func _physics_process(delta):
 	if is_jumping:
+		return
+	
+	if global_translation.y < return_to_spawn_depth:
+		return_to_spawn_point()
 		return
 	
 	var heading = determine_heading()
