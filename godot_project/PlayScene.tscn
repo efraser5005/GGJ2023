@@ -17,7 +17,7 @@
 
 [sub_resource type="BoxShape" id=89]
 
-[node name="Root" type="Spatial"]
+[node name="PlayScene" type="Spatial"]
 
 [node name="Player" type="RigidBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.451022, 0 )
