@@ -1,12 +1,6 @@
 extends Node
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
 var digPoints
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -50,10 +44,3 @@ func checkDistance(playerLocation):
 		if closest == null or distance < closest:
 			closest = distance
 	return closest
-		
-	
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
