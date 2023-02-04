@@ -7,12 +7,15 @@ var return_to_spawn_depth = -3
 
 var is_jumping = false
 
+
 func _ready():
 	linear_damp = 2
+	SignalBus.connect("dig_return", self, "dig")
 	return_to_spawn_point()
 	
 func return_to_spawn_point():
 	global_transform = get_node("../SpawnPoint").global_transform
+
 
 func _physics_process(delta):
 	if is_jumping:
@@ -62,6 +65,12 @@ func determine_heading():
 		heading += right
 	
 	return heading.normalized()
+	
+func dig(params):
+	var canDig = params[0]
+	var oinkMsg = params[1]
+	print("oink!")
+	SignalBus.emit_signal("show_dig_txt", get_viewport().size / 2, oinkMsg)
 
 func _input(event):
 	if is_jumping:
@@ -73,7 +82,8 @@ func _input(event):
 		$CameraAnchor.rotate_camera(1)
 	elif event.is_action_pressed("ui_accept"):
 		$AnimationPlayer.play("JumpStomp")
-		
+		SignalBus.emit_signal("attempt_dig", global_translation)
+
 
 
 func _on_animation_started(anim_name):
