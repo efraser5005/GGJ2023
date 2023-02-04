@@ -102,5 +102,7 @@ light_indirect_energy = 16.0
 shadow_enabled = true
 omni_range = 28.9709
 
+[node name="Dig Points" type="Node" parent="."]
+
 [connection signal="animation_finished" from="Player/AnimationPlayer" to="Player" method="_on_animation_finished"]
 [connection signal="animation_started" from="Player/AnimationPlayer" to="Player" method="_on_animation_started"]
