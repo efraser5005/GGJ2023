@@ -75,17 +75,17 @@ omni_range = 263.099
 [node name="Dig Points" type="Node" parent="."]
 script = ExtResource( 21 )
 
-[node name="DigTruffles2" type="Spatial" parent="Dig Points"]
+[node name="DigTruffles1" type="Spatial" parent="Dig Points"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.74737, 0.0460563, 0.0427294 )
 script = ExtResource( 22 )
 texture = ExtResource( 12 )
 text = "Truffles. Pay dirt."
 
 [node name="DigPointPorco" type="Spatial" parent="Dig Points"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.30924, -0.776263, 11.1767 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.37899, -0.733858, 11.7483 )
 script = ExtResource( 22 )
 texture = ExtResource( 7 )
-text = "Presented without comment"
+text = ""
 
 [node name="DigBrokenPot" type="Spatial" parent="Dig Points"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.53266, 0, -28.365 )
@@ -93,7 +93,7 @@ script = ExtResource( 22 )
 texture = ExtResource( 11 )
 text = "A clay planter, long since rent asunder by the roots of the plant it once held."
 
-[node name="DigTruffles" type="Spatial" parent="Dig Points"]
+[node name="DigTruffles2" type="Spatial" parent="Dig Points"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -14.9362 )
 script = ExtResource( 22 )
 texture = ExtResource( 12 )
@@ -103,7 +103,7 @@ text = "Truffles. Sometimes, you actually find what you're looking for."
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -31.6032, 3.0756, -38.596 )
 script = ExtResource( 22 )
 texture = ExtResource( 12 )
-text = "Truffes"
+text = "Yes. Truffles."
 
 [node name="ItemPanel" type="PanelContainer" parent="."]
 pause_mode = 2
