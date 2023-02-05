@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://level/LevelGeometry.tscn" type="PackedScene" id=1]
 [ext_resource path="res://CameraAnchor.gd" type="Script" id=2]
@@ -6,14 +6,13 @@
 [ext_resource path="res://piggie_material.tres" type="Material" id=4]
 [ext_resource path="res://cubepig.obj" type="ArrayMesh" id=5]
 [ext_resource path="res://main_menu_theme.tres" type="Theme" id=6]
-[ext_resource path="res://cube_pig_headshot.png" type="Texture" id=7]
+[ext_resource path="res://american_porco.png" type="Texture" id=7]
 [ext_resource path="res://JumpStomp.tres" type="Animation" id=8]
 [ext_resource path="res://font/menu_font_20.tres" type="DynamicFont" id=9]
 [ext_resource path="res://DugUpPanel.gd" type="Script" id=10]
 [ext_resource path="res://OnScreenUI.gd" type="Script" id=20]
 [ext_resource path="res://Dig.gd" type="Script" id=21]
 [ext_resource path="res://DigPoint.gd" type="Script" id=22]
-[ext_resource path="res://diggable_items/american_proco.png" type="Texture" id=23]
 [ext_resource path="res://font/TruffleCounterTextFont.tres" type="DynamicFont" id=24]
 
 [sub_resource type="SphereShape" id=84]
@@ -77,10 +76,10 @@ script = ExtResource( 21 )
 [node name="DigPointPorco" type="Spatial" parent="Dig Points"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.20023 )
 script = ExtResource( 22 )
-texture = ExtResource( 23 )
+texture = ExtResource( 7 )
 text = "Presented without comment"
 
-[node name="ItemPanel" type="Panel" parent="."]
+[node name="ItemPanel" type="PanelContainer" parent="."]
 pause_mode = 2
 visible = false
 anchor_right = 1.0
@@ -92,27 +91,38 @@ margin_bottom = -100.0
 script = ExtResource( 10 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ItemPanel"]
-anchor_right = 1.0
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 817.0
+margin_bottom = 393.0
+size_flags_vertical = 3
 theme = ExtResource( 6 )
 custom_constants/separation = 5
 alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ItemPanel/VBoxContainer"]
-margin_right = 824.0
-margin_bottom = 344.0
+margin_right = 810.0
+margin_bottom = 349.0
+size_flags_vertical = 3
 
 [node name="ItemImage" type="TextureRect" parent="ItemPanel/VBoxContainer/HBoxContainer"]
-margin_right = 400.0
-margin_bottom = 344.0
+margin_right = 405.0
+margin_bottom = 349.0
+rect_min_size = Vector2( 200, 200 )
+size_flags_horizontal = 7
+size_flags_vertical = 7
 texture = ExtResource( 7 )
+expand = true
+stretch_mode = 6
 
 [node name="ItemTextLabel" type="Label" parent="ItemPanel/VBoxContainer/HBoxContainer"]
-margin_left = 400.0
-margin_top = 159.0
-margin_right = 677.0
-margin_bottom = 185.0
+margin_left = 405.0
+margin_top = 161.0
+margin_right = 810.0
+margin_bottom = 187.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 7
 custom_fonts/font = ExtResource( 9 )
 text = "This is some text for an image"
 align = 1
@@ -120,9 +130,12 @@ valign = 2
 
 [node name="KeepDiggingButton" type="Button" parent="ItemPanel/VBoxContainer"]
 pause_mode = 2
-margin_top = 349.0
-margin_right = 824.0
-margin_bottom = 381.0
+margin_left = 333.0
+margin_top = 354.0
+margin_right = 476.0
+margin_bottom = 386.0
+size_flags_horizontal = 4
+size_flags_vertical = 8
 custom_fonts/font = ExtResource( 9 )
 text = "Keep Digging"
 
