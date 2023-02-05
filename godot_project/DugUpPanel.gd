@@ -8,7 +8,7 @@ extends Panel
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	SignalBus.connect("show_item_panel", self, "show_item_panel")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -20,7 +20,7 @@ func _input(event):
 	if event.is_action_pressed("ui_cancel"):
 		_on_KeepDiggingButton_pressed()
 	if event.is_action_pressed("ui_page_down"):
-		display_dug_up_panel()
+		show_item_panel(null, "Lorem ipsum")
 
 
 
@@ -34,7 +34,8 @@ func set_panel_contents(object_texture, object_text):
 	$VBoxContainer/ItemTextLabel.text = object_text
 	
 	
-func display_dug_up_panel():
+func show_item_panel(object_texture, object_text):
+	set_panel_contents(object_texture, object_text)
 	get_tree().paused = true
 	self.show()
 	

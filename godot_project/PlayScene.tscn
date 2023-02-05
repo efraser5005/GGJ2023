@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://island/texture_0.png" type="Texture" id=1]
 [ext_resource path="res://CameraAnchor.gd" type="Script" id=2]
@@ -21,6 +21,8 @@
 [ext_resource path="res://islandprops/billboards/Grassbunch.tscn" type="PackedScene" id=19]
 [ext_resource path="res://OnScreenUI.gd" type="Script" id=20]
 [ext_resource path="res://Dig.gd" type="Script" id=21]
+[ext_resource path="res://DigPoint.gd" type="Script" id=22]
+[ext_resource path="res://diggable_items/american_proco.png" type="Texture" id=23]
 
 [sub_resource type="SphereShape" id=84]
 
@@ -639,10 +641,13 @@ omni_range = 263.099
 [node name="Dig Points" type="Node" parent="."]
 script = ExtResource( 21 )
 
-[node name="Spatial" type="Spatial" parent="Dig Points"]
+[node name="DigPointPorco" type="Spatial" parent="Dig Points"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.20023 )
+script = ExtResource( 22 )
+texture = ExtResource( 23 )
+text = "Presented without comment"
 
-[node name="DugUpPanel" type="Panel" parent="."]
+[node name="ItemPanel" type="Panel" parent="."]
 pause_mode = 2
 visible = false
 anchor_right = 1.0
@@ -653,22 +658,22 @@ margin_right = -100.0
 margin_bottom = -100.0
 script = ExtResource( 10 )
 
-[node name="VBoxContainer" type="VBoxContainer" parent="DugUpPanel"]
+[node name="VBoxContainer" type="VBoxContainer" parent="ItemPanel"]
 anchor_right = 1.0
 theme = ExtResource( 6 )
 custom_constants/separation = 5
 alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="DugUpPanel/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="ItemPanel/VBoxContainer"]
 margin_right = 824.0
 margin_bottom = 344.0
 
-[node name="ItemImage" type="TextureRect" parent="DugUpPanel/VBoxContainer/HBoxContainer"]
+[node name="ItemImage" type="TextureRect" parent="ItemPanel/VBoxContainer/HBoxContainer"]
 margin_right = 400.0
 margin_bottom = 344.0
 texture = ExtResource( 7 )
 
-[node name="ItemTextLabel" type="Label" parent="DugUpPanel/VBoxContainer/HBoxContainer"]
+[node name="ItemTextLabel" type="Label" parent="ItemPanel/VBoxContainer/HBoxContainer"]
 margin_left = 400.0
 margin_top = 159.0
 margin_right = 677.0
@@ -680,7 +685,7 @@ text = "This is some text for an image"
 align = 1
 valign = 2
 
-[node name="KeepDiggingButton" type="Button" parent="DugUpPanel/VBoxContainer"]
+[node name="KeepDiggingButton" type="Button" parent="ItemPanel/VBoxContainer"]
 pause_mode = 2
 margin_top = 349.0
 margin_right = 824.0
@@ -702,4 +707,4 @@ text = "0/20"
 
 [connection signal="animation_finished" from="Player/AnimationPlayer" to="Player" method="_on_animation_finished"]
 [connection signal="animation_started" from="Player/AnimationPlayer" to="Player" method="_on_animation_started"]
-[connection signal="pressed" from="DugUpPanel/VBoxContainer/KeepDiggingButton" to="DugUpPanel" method="_on_KeepDiggingButton_pressed"]
+[connection signal="pressed" from="ItemPanel/VBoxContainer/KeepDiggingButton" to="ItemPanel" method="_on_KeepDiggingButton_pressed"]
