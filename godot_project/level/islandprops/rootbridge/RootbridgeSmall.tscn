@@ -1,9 +1,8 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://level/islandprops/rootbridge/rootbridge_small.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://level/islandprops/rootbridge/texture_0.png" type="Texture" id=2]
 [ext_resource path="res://level/islandprops/billboards/branch_long.png" type="Texture" id=3]
-[ext_resource path="res://level/islandprops/billboards/vine.png" type="Texture" id=4]
 [ext_resource path="res://level/islandprops/billboards/branch_thick.png" type="Texture" id=5]
 [ext_resource path="res://level/islandprops/billboards/branch.png" type="Texture" id=6]
 
@@ -22,62 +21,6 @@ material/0 = SubResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
 shape = SubResource( 2 )
-
-[node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform( 0.997892, -0.00777726, 0.0644042, 0.00555331, 0.999381, 0.0346397, -0.0646334, -0.0342092, 0.997322, -0.998568, -1.32717, 0.527393 )
-flip_v = true
-pixel_size = 0.025
-billboard = 2
-render_priority = 1
-texture = ExtResource( 4 )
-
-[node name="Sprite3D2" type="Sprite3D" parent="."]
-transform = Transform( 0.997892, -0.00777726, 0.0644041, 0.00555334, 0.99938, 0.0346397, -0.0646334, -0.0342092, 0.997322, 0.0315628, -1.75519, 0.341906 )
-flip_v = true
-pixel_size = 0.025
-billboard = 2
-render_priority = 1
-texture = ExtResource( 4 )
-
-[node name="Sprite3D3" type="Sprite3D" parent="."]
-transform = Transform( 0.997892, -0.00777725, 0.0644039, 0.00555339, 0.999379, 0.0346396, -0.0646334, -0.0342092, 0.997322, 2.00208, -1.25635, -0.160776 )
-flip_v = true
-pixel_size = 0.025
-billboard = 2
-render_priority = 1
-texture = ExtResource( 4 )
-
-[node name="Sprite3D6" type="Sprite3D" parent="."]
-transform = Transform( 0.997892, -0.00777724, 0.0644039, 0.00555342, 0.999379, 0.0346396, -0.0646334, -0.0342092, 0.997321, 2.56032, -1.88295, -0.25705 )
-flip_v = true
-pixel_size = 0.025
-billboard = 2
-render_priority = 1
-texture = ExtResource( 4 )
-
-[node name="Sprite3D7" type="Sprite3D" parent="."]
-transform = Transform( 0.997892, -0.00777724, 0.0644039, 0.00555346, 0.999379, 0.0346396, -0.0646334, -0.0342092, 0.997321, 1.17005, -1.99939, -1.04848 )
-flip_v = true
-pixel_size = 0.025
-billboard = 2
-render_priority = 1
-texture = ExtResource( 4 )
-
-[node name="Sprite3D8" type="Sprite3D" parent="."]
-transform = Transform( 0.997204, 0.0127742, 0.0735832, -0.00714637, 0.997057, -0.0762402, -0.0743405, 0.0755013, 0.994369, -1.53117, -1.60816, -1.03764 )
-flip_v = true
-pixel_size = 0.025
-billboard = 2
-render_priority = 1
-texture = ExtResource( 4 )
-
-[node name="Sprite3D9" type="Sprite3D" parent="."]
-transform = Transform( 0.996465, 0.0286737, 0.0789068, -0.0158651, 0.98724, -0.158395, -0.0824418, 0.156584, 0.984216, 3.00265, -1.1278, -1.26656 )
-flip_v = true
-pixel_size = 0.025
-billboard = 2
-render_priority = 1
-texture = ExtResource( 4 )
 
 [node name="Sprite3D10" type="Sprite3D" parent="."]
 transform = Transform( 0.999993, 0, -1.49012e-08, 0, 0.999991, 1.86265e-09, 1.49012e-08, 9.31323e-10, 0.999999, 4.26388, 0.446462, -1.39232 )
@@ -120,19 +63,3 @@ pixel_size = 0.025
 billboard = 2
 render_priority = 1
 texture = ExtResource( 5 )
-
-[node name="Sprite3D4" type="Sprite3D" parent="."]
-transform = Transform( 0.997892, -0.00777724, 0.0644039, 0.00555347, 0.999379, 0.0346396, -0.0646334, -0.0342092, 0.997321, 0.618145, -1.37969, 0.465271 )
-flip_v = true
-pixel_size = 0.025
-billboard = 2
-render_priority = 1
-texture = ExtResource( 4 )
-
-[node name="Sprite3D5" type="Sprite3D" parent="."]
-transform = Transform( 0.997891, -0.00777722, 0.0644039, 0.00555348, 0.999378, 0.0346396, -0.0646333, -0.0342092, 0.997321, 0.877939, -1.10054, 0.41433 )
-flip_v = true
-pixel_size = 0.025
-billboard = 2
-render_priority = 1
-texture = ExtResource( 4 )

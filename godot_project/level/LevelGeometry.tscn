@@ -612,6 +612,78 @@ material/0 = SubResource( 103 )
 transform = Transform( -0.201555, -0.0128927, -0.97939, -0.0260963, 0.999632, -0.00778848, 0.979124, 0.023989, -0.201817, -0.596786, 5.54115, 4.5164 )
 skeleton = NodePath("../..")
 
+[node name="Sprite3D" type="Sprite3D" parent="Island3/RootbridgeSmall"]
+transform = Transform( 0.997892, -0.00777726, 0.0644042, 0.00555331, 0.999381, 0.0346397, -0.0646334, -0.0342092, 0.997322, -0.998568, -1.32717, 0.527393 )
+flip_v = true
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 21 )
+
+[node name="Sprite3D2" type="Sprite3D" parent="Island3/RootbridgeSmall"]
+transform = Transform( 0.997892, -0.00777726, 0.0644041, 0.00555334, 0.99938, 0.0346397, -0.0646334, -0.0342092, 0.997322, 0.0315628, -1.75519, 0.341906 )
+flip_v = true
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 21 )
+
+[node name="Sprite3D3" type="Sprite3D" parent="Island3/RootbridgeSmall"]
+transform = Transform( 0.997892, -0.00777725, 0.0644039, 0.00555339, 0.999379, 0.0346396, -0.0646334, -0.0342092, 0.997322, 2.00208, -1.25635, -0.160776 )
+flip_v = true
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 21 )
+
+[node name="Sprite3D6" type="Sprite3D" parent="Island3/RootbridgeSmall"]
+transform = Transform( 0.997892, -0.00777724, 0.0644039, 0.00555342, 0.999379, 0.0346396, -0.0646334, -0.0342092, 0.997321, 2.56032, -1.88295, -0.25705 )
+flip_v = true
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 21 )
+
+[node name="Sprite3D7" type="Sprite3D" parent="Island3/RootbridgeSmall"]
+transform = Transform( 0.997892, -0.00777724, 0.0644039, 0.00555346, 0.999379, 0.0346396, -0.0646334, -0.0342092, 0.997321, 1.17005, -1.99939, -1.04848 )
+flip_v = true
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 21 )
+
+[node name="Sprite3D8" type="Sprite3D" parent="Island3/RootbridgeSmall"]
+transform = Transform( 0.997204, 0.0127742, 0.0735832, -0.00714637, 0.997057, -0.0762402, -0.0743405, 0.0755013, 0.994369, -1.53117, -1.60816, -1.03764 )
+flip_v = true
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 21 )
+
+[node name="Sprite3D9" type="Sprite3D" parent="Island3/RootbridgeSmall"]
+transform = Transform( 0.996465, 0.0286737, 0.0789068, -0.0158651, 0.98724, -0.158395, -0.0824418, 0.156584, 0.984216, 3.00265, -1.1278, -1.26656 )
+flip_v = true
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 21 )
+
+[node name="Sprite3D4" type="Sprite3D" parent="Island3/RootbridgeSmall"]
+transform = Transform( 0.997892, -0.00777724, 0.0644039, 0.00555347, 0.999379, 0.0346396, -0.0646334, -0.0342092, 0.997321, 0.618145, -1.37969, 0.465271 )
+flip_v = true
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 21 )
+
+[node name="Sprite3D5" type="Sprite3D" parent="Island3/RootbridgeSmall"]
+transform = Transform( 0.997891, -0.00777722, 0.0644039, 0.00555348, 0.999378, 0.0346396, -0.0646333, -0.0342092, 0.997321, 0.877939, -1.10054, 0.41433 )
+flip_v = true
+pixel_size = 0.025
+billboard = 2
+render_priority = 1
+texture = ExtResource( 21 )
+
 [node name="Tree1" parent="Island3" instance=ExtResource( 17 )]
 
 [node name="Tree2" parent="Island3" instance=ExtResource( 17 )]

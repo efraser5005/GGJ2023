@@ -13,7 +13,7 @@ func _on_MainMenu_new_game():
 	add_child(PlayScene.instance())
 	$MainMenu.hide()
 	get_tree().paused = false
-	
+
 
 func _on_MainMenu_resume_game():
 	$MainMenu.hide()
