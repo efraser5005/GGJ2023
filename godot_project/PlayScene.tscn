@@ -83,21 +83,22 @@ script = ExtResource( 21 )
 
 [node name="DigTruffles1" parent="Dig Points" instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.747, -0.315, 0.043 )
+text = "Ah yes, truffles - your favorite food and a miraculous survivor of the climate apocalypse."
 
 [node name="DigPointPorco2" parent="Dig Points" instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.37899, -0.733858, 11.7483 )
 texture = ExtResource( 7 )
-text = ""
+text = "A subtle yet evocative painting of a farmer and his daughter standing in front of a Carpenter Gothic house. Something seems to be off about it, but you can't tell what. Unfortunately, it is also inedible."
 
 [node name="DigPointCoolBug" parent="Dig Points" instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.8631, -0.733858, 25.465 )
 texture = ExtResource( 25 )
-text = "Finding a cool bug is always a treasure."
+text = "Finding a cool bug is always a treasure. Despite your omnivorous tendencies, you can't eat this bug - it's too cool."
 
 [node name="DigPointBrokenPot" parent="Dig Points" instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.53266, 0, -28.365 )
 texture = ExtResource( 11 )
-text = "A clay planter, long since rent asunder by the roots of the plant it once held."
+text = "A clay planter, long since rent asunder by the roots of the plant it once held. It doesn't taste very good."
 
 [node name="DigTruffles4" parent="Dig Points" instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -14.9362 )
@@ -105,7 +106,7 @@ text = "Truffles. Sometimes, you actually find what you're looking for."
 
 [node name="DigTruffles5" parent="Dig Points" instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -31.6032, 3.0756, -38.596 )
-text = "Yes. Truffles."
+text = "Truffles! Once, humans would have used you to find these delicacies. Now, they're all yours!"
 
 [node name="DigTruffles6" parent="Dig Points" instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -38.9189, 3.44788, -60.9976 )
