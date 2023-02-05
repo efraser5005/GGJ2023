@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://level/LevelGeometry.tscn" type="PackedScene" id=1]
 [ext_resource path="res://CameraAnchor.gd" type="Script" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://MusicChangeSensor.gd" type="Script" id=12]
 [ext_resource path="res://diggable_items/DigPoint.tscn" type="PackedScene" id=13]
 [ext_resource path="res://diggable_items/pixel_wand.png" type="Texture" id=14]
+[ext_resource path="res://diggable_items/unexploded bomb.png" type="Texture" id=15]
 [ext_resource path="res://OnScreenUI.gd" type="Script" id=20]
 [ext_resource path="res://Dig.gd" type="Script" id=21]
 [ext_resource path="res://font/TruffleCounterTextFont.tres" type="DynamicFont" id=24]
@@ -81,7 +82,7 @@ omni_range = 263.099
 script = ExtResource( 21 )
 
 [node name="DigTruffles1" parent="Dig Points" instance=ExtResource( 13 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.74737, -0.314769, 0.0427294 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.747, -0.315, 0.043 )
 
 [node name="DigPointPorco2" parent="Dig Points" instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.37899, -0.733858, 11.7483 )
@@ -110,6 +111,11 @@ text = "Yes. Truffles."
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -38.9189, 3.44788, -60.9976 )
 texture = ExtResource( 14 )
 text = "Looking at this wand stirs a longing that you can't quite place."
+
+[node name="DigPointUnexplodedBomb" parent="Dig Points" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -42.2, 3.8, -26.9 )
+texture = ExtResource( 15 )
+text = "Unexploded ordinance. This would be disconcerting, if you weren't a pig. Since you are, and it doesn't have truffles in it, it isn't a very interesting find."
 
 [node name="ItemPanel" type="PanelContainer" parent="."]
 pause_mode = 2
