@@ -75,8 +75,14 @@ omni_range = 263.099
 [node name="Dig Points" type="Node" parent="."]
 script = ExtResource( 21 )
 
+[node name="DigTruffles2" type="Spatial" parent="Dig Points"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.74737, 0.0460563, 0.0427294 )
+script = ExtResource( 22 )
+texture = ExtResource( 12 )
+text = "Truffles. Pay dirt."
+
 [node name="DigPointPorco" type="Spatial" parent="Dig Points"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.20023 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.30924, -0.776263, 11.1767 )
 script = ExtResource( 22 )
 texture = ExtResource( 7 )
 text = "Presented without comment"
@@ -92,6 +98,12 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -14.9362 )
 script = ExtResource( 22 )
 texture = ExtResource( 12 )
 text = "Truffles. Sometimes, you actually find what you're looking for."
+
+[node name="DigTruffles3" type="Spatial" parent="Dig Points"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -31.6032, 3.0756, -38.596 )
+script = ExtResource( 22 )
+texture = ExtResource( 12 )
+text = "Truffes"
 
 [node name="ItemPanel" type="PanelContainer" parent="."]
 pause_mode = 2

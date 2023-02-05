@@ -19,8 +19,8 @@ func _ready():
 func _input(event):
 	if event.is_action_pressed("ui_cancel"):
 		_on_KeepDiggingButton_pressed()
-	if event.is_action_pressed("ui_page_down"):
-		show_item_panel(null, "Lorem ipsum")
+	#if event.is_action_pressed("ui_page_down"):
+		#show_item_panel(null, "Lorem ipsum")
 
 
 
