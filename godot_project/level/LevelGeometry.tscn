@@ -776,6 +776,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0194092, -1.73343, -8.45428 
 mesh = SubResource( 100 )
 material/0 = ExtResource( 2 )
 
+[node name="RootbridgeSmall" parent="." instance=ExtResource( 12 )]
+transform = Transform( -0.650306, -0.0514061, -0.757931, -0.097689, 0.995083, 0.0163265, 0.753365, 0.0846587, -0.65213, -16.9604, -1.48824, 23.8606 )
+skeleton = NodePath("../Rootbridge")
+
 [node name="Rootbridge" parent="." instance=ExtResource( 13 )]
 transform = Transform( 1.20057, -0.0564807, -0.343403, 0.100106, 1.23735, 0.146473, 0.333308, -0.168183, 1.19295, -8.92959, 1.27985, -28.6686 )
 material/0 = SubResource( 101 )

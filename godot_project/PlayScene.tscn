@@ -13,9 +13,11 @@
 [ext_resource path="res://diggable_items/plant_pot_broken_paint_small.png" type="Texture" id=11]
 [ext_resource path="res://MusicChangeSensor.gd" type="Script" id=12]
 [ext_resource path="res://diggable_items/DigPoint.tscn" type="PackedScene" id=13]
+[ext_resource path="res://diggable_items/pixel_wand.png" type="Texture" id=14]
 [ext_resource path="res://OnScreenUI.gd" type="Script" id=20]
 [ext_resource path="res://Dig.gd" type="Script" id=21]
 [ext_resource path="res://font/TruffleCounterTextFont.tres" type="DynamicFont" id=24]
+[ext_resource path="res://diggable_items/cool_bug.png" type="Texture" id=25]
 
 [sub_resource type="SphereShape" id=84]
 
@@ -86,6 +88,11 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.37899, -0.733858, 11.7483 )
 texture = ExtResource( 7 )
 text = ""
 
+[node name="DigPointCoolBug" parent="Dig Points" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.8631, -0.733858, 25.465 )
+texture = ExtResource( 25 )
+text = "Finding a cool bug is always a treasure."
+
 [node name="DigPointBrokenPot" parent="Dig Points" instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.53266, 0, -28.365 )
 texture = ExtResource( 11 )
@@ -98,6 +105,11 @@ text = "Truffles. Sometimes, you actually find what you're looking for."
 [node name="DigTruffles5" parent="Dig Points" instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -31.6032, 3.0756, -38.596 )
 text = "Yes. Truffles."
+
+[node name="DigTruffles6" parent="Dig Points" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -38.9189, 3.44788, -60.9976 )
+texture = ExtResource( 14 )
+text = "Looking at this wand stirs a longing that you can't quite place."
 
 [node name="ItemPanel" type="PanelContainer" parent="."]
 pause_mode = 2
