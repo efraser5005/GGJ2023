@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://level/islandprops/billboards/Grassbunch.tscn" type="PackedScene" id=1]
 [ext_resource path="res://level/materials/water_shader.tres" type="Material" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://level/island3/texture_1.png" type="Texture" id=15]
 [ext_resource path="res://level/islandprops/tree/Tree2.tscn" type="PackedScene" id=16]
 [ext_resource path="res://level/islandprops/tree/Tree1.tscn" type="PackedScene" id=17]
+[ext_resource path="res://stylizedfire/StylizedFireGreen.tscn" type="PackedScene" id=18]
 
 [sub_resource type="SpatialMaterial" id=92]
 albedo_texture = ExtResource( 10 )
@@ -600,7 +601,6 @@ material/0 = SubResource( 103 )
 [node name="StaticBody" type="StaticBody" parent="Island3"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Island3/StaticBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 shape = SubResource( 102 )
 
 [node name="RootbridgeSmall" parent="Island3" instance=ExtResource( 12 )]
@@ -608,7 +608,6 @@ transform = Transform( -0.201555, -0.0128927, -0.97939, -0.0260963, 0.999632, -0
 skeleton = NodePath("../..")
 
 [node name="Tree1" parent="Island3" instance=ExtResource( 17 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.22651, 4.27464, -6.70433 )
 
 [node name="Tree2" parent="Island3" instance=ExtResource( 17 )]
 transform = Transform( 0.0617628, 0, 0.998091, 0, 1, 0, -0.998091, 0, 0.0617628, 13.6304, 0.666999, 0.497919 )
@@ -929,3 +928,6 @@ transform = Transform( 0.594753, 0, 0.803908, 0, 1, 0, -0.803908, 0, 0.594753, 8
 [node name="Tree86" parent="Trees" instance=ExtResource( 16 )]
 transform = Transform( -0.985244, 0, -0.171155, 0, 1, 0, 0.171155, 0, -0.985244, 68.955, 0.26418, -71.4795 )
 skeleton = NodePath("../Tree5")
+
+[node name="Fire" parent="." instance=ExtResource( 18 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.09152, 0.0848926, -1.55898 )
