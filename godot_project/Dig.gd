@@ -46,6 +46,7 @@ func get_nearest_dig_point(playerLocation):
 		var distance = get_x_z_distance(playerLocation, itemLocation)
 		if closestPoint == null or distance < closestDistance:
 			closestPoint = point
+			closestDistance = distance
 	return closestPoint
 	
 func attemptDig(playerLocation):

@@ -5,7 +5,7 @@ var textPopup = preload("res://TextPopup.tscn")
 var randRange = 50
 
 var itemCounter = 0
-var totalItems = 2
+var totalItems = 3
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
