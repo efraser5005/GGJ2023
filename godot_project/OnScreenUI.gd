@@ -4,8 +4,12 @@ var textPopup = preload("res://TextPopup.tscn")
 
 var randRange = 50
 
+var itemCounter = 0
+var totalItems = 1
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$TruffleCounter.text = String(itemCounter) + "/" + String(totalItems)
 	SignalBus.connect("show_dig_txt", self, "showDigText")
 
 
@@ -17,3 +21,8 @@ func showDigText(location, text):
 	popup.global_position = location
 	popup.text = text
 	add_child(popup)
+
+
+func _on_Dig_Points_update_item_counter():
+	itemCounter += 1
+	$TruffleCounter.text = String(itemCounter) + "/" + String(totalItems)	

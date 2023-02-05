@@ -150,9 +150,10 @@ margin_left = 28.0
 margin_right = 158.0
 margin_bottom = 121.0
 custom_fonts/font = ExtResource( 24 )
-text = "00/20"
+text = "0/1"
 valign = 1
 
 [connection signal="animation_finished" from="Player/AnimationPlayer" to="Player" method="_on_animation_finished"]
 [connection signal="animation_started" from="Player/AnimationPlayer" to="Player" method="_on_animation_started"]
+[connection signal="update_item_counter" from="Dig Points" to="OnScreenUI" method="_on_Dig_Points_update_item_counter"]
 [connection signal="pressed" from="ItemPanel/VBoxContainer/KeepDiggingButton" to="ItemPanel" method="_on_KeepDiggingButton_pressed"]
