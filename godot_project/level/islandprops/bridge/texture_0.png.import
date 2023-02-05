@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/texture_1.png-5f82876e1e5991884d83a389ab274540.stex"
+path="res://.import/texture_0.png-ab81bd63565bde5cd41a8b2ece96c74d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://island3/texture_1.png"
-dest_files=[ "res://.import/texture_1.png-5f82876e1e5991884d83a389ab274540.stex" ]
+source_file="res://level/islandprops/bridge/texture_0.png"
+dest_files=[ "res://.import/texture_0.png-ab81bd63565bde5cd41a8b2ece96c74d.stex" ]
 
 [params]
 
@@ -20,10 +20,10 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
-flags/srgb=2
+flags/srgb=1
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

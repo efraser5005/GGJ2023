@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/branch.png-08d1b3cda6f8ad1a049f5441de40190f.stex"
+path="res://.import/texture_0.png-e268be5f46ad472ef93bb1f6e514d3d5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://islandprops/billboards/branch.png"
-dest_files=[ "res://.import/branch.png-08d1b3cda6f8ad1a049f5441de40190f.stex" ]
+source_file="res://level/island/texture_0.png"
+dest_files=[ "res://.import/texture_0.png-e268be5f46ad472ef93bb1f6e514d3d5.stex" ]
 
 [params]
 

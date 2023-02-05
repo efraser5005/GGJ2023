@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/texture_0.png-534260fe47ec13a63ef3958acf6d52fe.stex"
+path="res://.import/branch_long.png-13deb8b4d6450e50051eeee316c51353.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://island/texture_0.png"
-dest_files=[ "res://.import/texture_0.png-534260fe47ec13a63ef3958acf6d52fe.stex" ]
+source_file="res://level/islandprops/billboards/branch_long.png"
+dest_files=[ "res://.import/branch_long.png-13deb8b4d6450e50051eeee316c51353.stex" ]
 
 [params]
 
