@@ -21,6 +21,7 @@
 [ext_resource path="res://islandprops/billboards/Grassbunch.tscn" type="PackedScene" id=19]
 [ext_resource path="res://OnScreenUI.gd" type="Script" id=20]
 [ext_resource path="res://Dig.gd" type="Script" id=21]
+[ext_resource path="res://islandprops/rootbridge/Rootbridge.tscn" type="PackedScene" id=22]
 
 [sub_resource type="SphereShape" id=84]
 
@@ -624,9 +625,15 @@ material/0 = SubResource( 97 )
 shape = SubResource( 96 )
 
 [node name="Water" type="MeshInstance" parent="LevelGeometry"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0151825, -1.83232, -8.44744 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0151825, -1.745, -8.44744 )
 mesh = SubResource( 100 )
 material/0 = ExtResource( 17 )
+
+[node name="Rootbridge" parent="LevelGeometry" instance=ExtResource( 22 )]
+transform = Transform( 1.20057, -0.0564807, -0.343403, 0.100106, 1.23735, 0.146473, 0.333308, -0.168183, 1.19295, -8.92959, 1.27985, -28.6686 )
+
+[node name="Rootbridge2" parent="LevelGeometry" instance=ExtResource( 22 )]
+transform = Transform( 0.476244, 0.0207064, -1.15554, 0.0383906, 1.24883, 0.0382006, 1.15508, -0.0500439, 0.475166, -19.6519, -0.520897, -36.1685 )
 
 [node name="OmniLight" type="OmniLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.22119, 5.7604, -52.564 )
