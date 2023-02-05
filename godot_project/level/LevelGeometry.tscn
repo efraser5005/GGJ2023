@@ -7,7 +7,7 @@
 [ext_resource path="res://level/islandprops/bridge/bridge.obj" type="ArrayMesh" id=5]
 [ext_resource path="res://level/islandprops/billboards/cattail.png" type="Texture" id=6]
 [ext_resource path="res://level/island2/texture_1.png" type="Texture" id=7]
-[ext_resource path="res://IslandPhysicsMaterial.tres" type="PhysicsMaterial" id=8]
+[ext_resource path="res://level/IslandPhysicsMaterial.tres" type="PhysicsMaterial" id=8]
 [ext_resource path="res://level/island/island_tree.obj" type="ArrayMesh" id=9]
 [ext_resource path="res://level/island/texture_0.png" type="Texture" id=10]
 [ext_resource path="res://level/islandprops/rootbridge/texture_0.png" type="Texture" id=11]
@@ -306,6 +306,7 @@ skeleton = NodePath("../..")
 material/0 = SubResource( 99 )
 
 [node name="StaticBody" type="StaticBody" parent="Island2"]
+physics_material_override = ExtResource( 8 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Island2/StaticBody"]
 shape = SubResource( 98 )
@@ -809,6 +810,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.3402, 3.99009, -2.15862 )
 transform = Transform( -0.161829, -0.041235, 0.985957, 0.131161, 0.989363, 0.0629054, -0.978064, 0.1395, -0.154699, 0.642622, 4.3627, 0.426775 )
 
 [node name="StaticBody2" type="StaticBody" parent="Island3"]
+physics_material_override = ExtResource( 8 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Island3/StaticBody2"]
 shape = SubResource( 102 )
@@ -819,6 +821,7 @@ mesh = ExtResource( 5 )
 material/0 = SubResource( 97 )
 
 [node name="StaticBody" type="StaticBody" parent="Bridge"]
+physics_material_override = ExtResource( 8 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Bridge/StaticBody"]
 shape = SubResource( 96 )
@@ -829,6 +832,7 @@ mesh = ExtResource( 5 )
 material/0 = SubResource( 97 )
 
 [node name="StaticBody" type="StaticBody" parent="Bridge2"]
+physics_material_override = ExtResource( 8 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Bridge2/StaticBody"]
 shape = SubResource( 96 )
@@ -839,6 +843,7 @@ mesh = ExtResource( 5 )
 material/0 = SubResource( 97 )
 
 [node name="StaticBody" type="StaticBody" parent="Bridge3"]
+physics_material_override = ExtResource( 8 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Bridge3/StaticBody"]
 shape = SubResource( 96 )

@@ -136,16 +136,16 @@ visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 100.0
-margin_top = 100.0
+margin_top = 75.0
 margin_right = -100.0
-margin_bottom = -100.0
+margin_bottom = -75.0
 script = ExtResource( 10 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ItemPanel"]
 margin_left = 7.0
 margin_top = 7.0
 margin_right = 817.0
-margin_bottom = 393.0
+margin_bottom = 443.0
 size_flags_vertical = 3
 theme = ExtResource( 6 )
 custom_constants/separation = 5
@@ -153,12 +153,12 @@ alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ItemPanel/VBoxContainer"]
 margin_right = 810.0
-margin_bottom = 349.0
+margin_bottom = 399.0
 size_flags_vertical = 3
 
 [node name="ItemImage" type="TextureRect" parent="ItemPanel/VBoxContainer/HBoxContainer"]
 margin_right = 405.0
-margin_bottom = 349.0
+margin_bottom = 399.0
 rect_min_size = Vector2( 200, 200 )
 size_flags_horizontal = 7
 size_flags_vertical = 7
@@ -168,9 +168,9 @@ stretch_mode = 6
 
 [node name="ItemTextLabel" type="Label" parent="ItemPanel/VBoxContainer/HBoxContainer"]
 margin_left = 405.0
-margin_top = 161.0
+margin_top = 186.0
 margin_right = 810.0
-margin_bottom = 187.0
+margin_bottom = 212.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 7
@@ -183,9 +183,9 @@ autowrap = true
 [node name="KeepDiggingButton" type="Button" parent="ItemPanel/VBoxContainer"]
 pause_mode = 2
 margin_left = 333.0
-margin_top = 354.0
+margin_top = 404.0
 margin_right = 476.0
-margin_bottom = 386.0
+margin_bottom = 436.0
 size_flags_horizontal = 4
 size_flags_vertical = 8
 custom_fonts/font = ExtResource( 9 )

@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://level/islandprops/rootbridge/rootbridge_small.obj" type="ArrayMesh" id=1]
 [ext_resource path="res://level/islandprops/rootbridge/texture_0.png" type="Texture" id=2]
 [ext_resource path="res://level/islandprops/billboards/branch_long.png" type="Texture" id=3]
+[ext_resource path="res://level/IslandPhysicsMaterial.tres" type="PhysicsMaterial" id=4]
 [ext_resource path="res://level/islandprops/billboards/branch_thick.png" type="Texture" id=5]
 [ext_resource path="res://level/islandprops/billboards/branch.png" type="Texture" id=6]
 
@@ -18,6 +19,7 @@ mesh = ExtResource( 1 )
 material/0 = SubResource( 1 )
 
 [node name="StaticBody" type="StaticBody" parent="."]
+physics_material_override = ExtResource( 4 )
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
 shape = SubResource( 2 )
