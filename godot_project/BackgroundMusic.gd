@@ -8,3 +8,10 @@ func _ready():
 func _change_music():
 	if $Track1.volume_db == 0:
 		$AnimationPlayer.play("FadeToTrack2")
+
+func reset_music():
+	$Track1.play(0)
+	$Track1.volume_db = 0
+	
+	$Track2.volume_db = -80
+	$Track2.play(0)
