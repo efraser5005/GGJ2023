@@ -1,10 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://level/islandprops/rootbridge/texture_0.png" type="Texture" id=1]
 [ext_resource path="res://level/islandprops/billboards/branch_thick.png" type="Texture" id=2]
 [ext_resource path="res://level/islandprops/billboards/branch_long.png" type="Texture" id=3]
 [ext_resource path="res://level/islandprops/rootbridge/rootbridge.obj" type="ArrayMesh" id=4]
-[ext_resource path="res://level/islandprops/billboards/vine.png" type="Texture" id=5]
 [ext_resource path="res://level/islandprops/billboards/branch.png" type="Texture" id=6]
 
 [sub_resource type="SpatialMaterial" id=101]
@@ -17,36 +16,6 @@ data = PoolVector3Array( -1, -0.4999, -0.8749, 3, -1.3751, -1.2501, 3, -0.1249, 
 transform = Transform( 1.20405, 0.0046579, -0.335755, 0.0407292, 1.23863, 0.163243, 0.333308, -0.168183, 1.19295, -8.92959, 1.45354, -28.6686 )
 mesh = ExtResource( 4 )
 material/0 = SubResource( 101 )
-
-[node name="Vine" type="Sprite3D" parent="."]
-transform = Transform( -0.986618, 0.0954841, 0.132188, -0.0897371, -0.994772, 0.048786, 0.136155, 0.03627, 0.990028, 0.139767, -1.38352, 0.48204 )
-pixel_size = 0.025
-render_priority = 1
-texture = ExtResource( 5 )
-
-[node name="Vine2" type="Sprite3D" parent="."]
-transform = Transform( -0.997579, 0.05797, -0.0384611, -0.0544983, -0.994814, -0.0858831, -0.0432405, -0.0835792, 0.995568, -1.8081, -1.69079, 0.382441 )
-pixel_size = 0.025
-render_priority = 1
-texture = ExtResource( 5 )
-
-[node name="Vine3" type="Sprite3D" parent="."]
-transform = Transform( -0.99568, 0.084833, -0.0378051, -0.0852501, -0.996315, 0.00955285, -0.0368556, 0.0127338, 0.999245, -2.35778, -1.64372, 0.461908 )
-pixel_size = 0.025
-render_priority = 1
-texture = ExtResource( 5 )
-
-[node name="Vine4" type="Sprite3D" parent="."]
-transform = Transform( -0.997579, 0.05797, -0.0384611, -0.0544983, -0.994814, -0.0858833, -0.0432405, -0.0835792, 0.995569, -4.07612, -1.47471, 0.312057 )
-pixel_size = 0.025
-render_priority = 1
-texture = ExtResource( 5 )
-
-[node name="Vine5" type="Sprite3D" parent="."]
-transform = Transform( -0.991013, 0.127015, -0.0420238, -0.132165, -0.978208, 0.160141, -0.0207682, 0.164253, 0.986207, 2.34194, -1.09125, 0.495308 )
-pixel_size = 0.025
-render_priority = 1
-texture = ExtResource( 5 )
 
 [node name="Branch" type="Sprite3D" parent="."]
 transform = Transform( 1, 7.45058e-09, 0, 7.45058e-09, 1, 1.49012e-08, 0, -1.49012e-08, 1.00001, 3.7983, 0.648726, 0.332272 )
