@@ -43,7 +43,7 @@ func get_nearest_dig_point(playerLocation):
 			continue
 
 		var itemLocation = point.global_translation
-		var distance = get_x_z_distance(playerLocation, itemLocation)
+		var distance = get_distance(playerLocation, itemLocation)
 		if closestPoint == null or distance < closestDistance:
 			closestPoint = point
 			closestDistance = distance
@@ -54,7 +54,7 @@ func attemptDig(playerLocation):
 	if nearestItem == null:
 		return
 
-	var distance = get_x_z_distance(playerLocation, nearestItem.global_translation)
+	var distance = get_distance(playerLocation, nearestItem.global_translation)
 
 	var oink = oink(distance)
 	var hitSomething = stepDistance(distance) == DISTANCE.HIT
@@ -71,7 +71,5 @@ func show_item_panel(texture, text):
 	SignalBus.emit_signal("show_item_panel", texture, text)
 	emit_signal("update_item_counter")
 
-func get_x_z_distance(firstLocation, secondLocation):
-	var first2D = Vector2(firstLocation.x, firstLocation.z)
-	var second2D = Vector2(secondLocation.x, secondLocation.z)
-	return first2D.distance_to(second2D)
+func get_distance(firstLocation, secondLocation):
+	return firstLocation.distance_to(secondLocation)
