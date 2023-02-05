@@ -4,13 +4,22 @@
 [ext_resource path="res://TextPopup.gd" type="Script" id=2]
 
 [node name="Position2D" type="Position2D"]
+scale = Vector2( 0.3, 0.3 )
 script = ExtResource( 2 )
 
 [node name="Label" type="Label" parent="."]
-margin_right = 56.0
-margin_bottom = 37.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -28.0
+margin_top = -18.5
+margin_right = 28.0
+margin_bottom = 18.5
 custom_fonts/font = ExtResource( 1 )
 align = 1
 valign = 1
 
 [node name="Tween" type="Tween" parent="."]
+
+[connection signal="tween_all_completed" from="Tween" to="." method="_on_Tween_tween_all_completed"]
