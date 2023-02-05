@@ -12,7 +12,7 @@ func _ready():
 	linear_damp = 2
 	SignalBus.connect("dig_return", self, "dig")
 	return_to_spawn_point()
-	
+
 func return_to_spawn_point():
 	global_transform = get_node("../SpawnPoint").global_transform
 
@@ -20,15 +20,15 @@ func return_to_spawn_point():
 func _physics_process(delta):
 	if is_jumping:
 		return
-	
+
 	if global_translation.y < return_to_spawn_depth:
 		return_to_spawn_point()
 		return
-	
+
 	var heading = determine_heading()
-	
+
 	add_central_force(heading * speed * accel)
-	
+
 	if linear_velocity.length_squared() > velocity_margin:
 		$MeshAnchor.look_at(
 			$MeshAnchor.global_transform.origin + linear_velocity,
@@ -39,7 +39,7 @@ func _integrate_forces(state):
 	if is_jumping:
 		state.linear_velocity = Vector3()
 		return
-	
+
 	state.linear_velocity = state.linear_velocity.limit_length(speed)
 
 
@@ -49,23 +49,23 @@ func determine_heading():
 	camera_to_player = camera_to_player.normalized()
 	var forward = camera_to_player
 	var right = camera_to_player.rotated(Vector3.UP, -TAU / 4)
-	
+
 	var heading = Vector3()
-	
+
 	if Input.is_action_pressed("ui_up"):
 		heading += forward
-	
+
 	if Input.is_action_pressed("ui_down"):
 		heading -= forward
-	
+
 	if Input.is_action_pressed("ui_left"):
 		heading -= right
-	
+
 	if Input.is_action_pressed("ui_right"):
 		heading += right
-	
+
 	return heading.normalized()
-	
+
 func dig(params):
 	var canDig = params[0]
 	var oinkMsg = params[1]
@@ -75,7 +75,7 @@ func dig(params):
 func _input(event):
 	if is_jumping:
 		return
-		
+
 	if event.is_action_pressed("ui_rotate_left"):
 		$CameraAnchor.rotate_camera(-1)
 	elif event.is_action_pressed("ui_rotate_right"):

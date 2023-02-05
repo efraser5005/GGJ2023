@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://level/islandprops/billboards/Grassbunch.tscn" type="PackedScene" id=1]
 [ext_resource path="res://level/materials/water_shader.tres" type="Material" id=2]
@@ -17,7 +17,6 @@
 [ext_resource path="res://level/island3/texture_1.png" type="Texture" id=15]
 [ext_resource path="res://level/islandprops/tree/Tree2.tscn" type="PackedScene" id=16]
 [ext_resource path="res://level/islandprops/tree/Tree1.tscn" type="PackedScene" id=17]
-[ext_resource path="res://stylizedfire/StylizedFireGreen.tscn" type="PackedScene" id=18]
 [ext_resource path="res://level/islandprops/mound/Mound.tscn" type="PackedScene" id=19]
 [ext_resource path="res://level/islandprops/cabin/Cabin.tscn" type="PackedScene" id=20]
 [ext_resource path="res://level/islandprops/billboards/vine.png" type="Texture" id=21]
@@ -634,7 +633,6 @@ transform = Transform( 0.919672, 0, -0.392691, 0, 1, 0, 0.392691, 0, 0.919672, -
 transform = Transform( 0.760066, 0, 0.249603, 0, 0.8, 0, -0.249603, 0, 0.760066, -4.52724, 3.65478, -10.1853 )
 
 [node name="Foliage" type="Spatial" parent="Island3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="Cattailbunch" parent="Island3/Foliage" instance=ExtResource( 22 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4584, 1.18227, 7.97814 )
@@ -1185,9 +1183,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -55.5174, 1.35691, 53.9162 )
 
 [node name="Mound10" parent="Mounds" instance=ExtResource( 19 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28.1738, 1.7653, -35.8354 )
-
-[node name="Fire" parent="." instance=ExtResource( 18 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.09152, 0.0848926, -1.55898 )
 
 [node name="Grassbunch" parent="." instance=ExtResource( 1 )]
 transform = Transform( 0.600781, 0.795743, 0.0765203, -0.797577, 0.590163, 0.124815, 0.0541615, -0.136018, 0.989225, -36.7439, 5.3839, -53.2568 )

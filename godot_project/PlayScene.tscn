@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://level/LevelGeometry.tscn" type="PackedScene" id=1]
 [ext_resource path="res://CameraAnchor.gd" type="Script" id=2]
@@ -11,10 +11,9 @@
 [ext_resource path="res://font/menu_font_20.tres" type="DynamicFont" id=9]
 [ext_resource path="res://DugUpPanel.gd" type="Script" id=10]
 [ext_resource path="res://diggable_items/plant_pot_broken_paint_small.png" type="Texture" id=11]
-[ext_resource path="res://diggable_items/truffles.png" type="Texture" id=12]
+[ext_resource path="res://diggable_items/DigPoint.tscn" type="PackedScene" id=13]
 [ext_resource path="res://OnScreenUI.gd" type="Script" id=20]
 [ext_resource path="res://Dig.gd" type="Script" id=21]
-[ext_resource path="res://DigPoint.gd" type="Script" id=22]
 [ext_resource path="res://font/TruffleCounterTextFont.tres" type="DynamicFont" id=24]
 
 [sub_resource type="SphereShape" id=84]
@@ -75,34 +74,25 @@ omni_range = 263.099
 [node name="Dig Points" type="Node" parent="."]
 script = ExtResource( 21 )
 
-[node name="DigTruffles1" type="Spatial" parent="Dig Points"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.74737, 0.0460563, 0.0427294 )
-script = ExtResource( 22 )
-texture = ExtResource( 12 )
-text = "Truffles. Pay dirt."
+[node name="DigTruffles1" parent="Dig Points" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.74737, -0.314769, 0.0427294 )
 
-[node name="DigPointPorco" type="Spatial" parent="Dig Points"]
+[node name="DigPointPorco2" parent="Dig Points" instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.37899, -0.733858, 11.7483 )
-script = ExtResource( 22 )
 texture = ExtResource( 7 )
 text = ""
 
-[node name="DigBrokenPot" type="Spatial" parent="Dig Points"]
+[node name="DigPointBrokenPot" parent="Dig Points" instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.53266, 0, -28.365 )
-script = ExtResource( 22 )
 texture = ExtResource( 11 )
 text = "A clay planter, long since rent asunder by the roots of the plant it once held."
 
-[node name="DigTruffles2" type="Spatial" parent="Dig Points"]
+[node name="DigTruffles4" parent="Dig Points" instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -14.9362 )
-script = ExtResource( 22 )
-texture = ExtResource( 12 )
 text = "Truffles. Sometimes, you actually find what you're looking for."
 
-[node name="DigTruffles3" type="Spatial" parent="Dig Points"]
+[node name="DigTruffles5" parent="Dig Points" instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -31.6032, 3.0756, -38.596 )
-script = ExtResource( 22 )
-texture = ExtResource( 12 )
 text = "Yes. Truffles."
 
 [node name="ItemPanel" type="PanelContainer" parent="."]

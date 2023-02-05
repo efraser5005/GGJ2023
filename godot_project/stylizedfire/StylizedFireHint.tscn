@@ -1,17 +1,17 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://stylizedfire/stylized_fire_shader.tres" type="Shader" id=1]
-[ext_resource path="res://stylizedfire/StylizedFire/WispyNoise.png" type="Texture" id=2]
+[ext_resource path="res://stylizedfire/stylized_fire_shader_hint.tres" type="Shader" id=1]
+[ext_resource path="res://stylizedfire/StylizedFire/HoleNoise.png" type="Texture" id=2]
 [ext_resource path="res://stylizedfire/StylizedFire/GreenFireGradient.tres" type="Texture" id=3]
 [ext_resource path="res://stylizedfire/StylizedFire/FireMask.png" type="Texture" id=4]
 
 [sub_resource type="ShaderMaterial" id=109]
 render_priority = 1
 shader = ExtResource( 1 )
-shader_param/emission_intensity = 2.0
-shader_param/time_scale = 1.0
+shader_param/emission_intensity = -0.5
+shader_param/time_scale = 2.0
 shader_param/texture_scale = Vector2( 1, 1 )
-shader_param/edge_softness = 0.1
+shader_param/edge_softness = 0.01
 shader_param/noise_texture = ExtResource( 2 )
 shader_param/texture_mask = ExtResource( 4 )
 
@@ -37,18 +37,20 @@ color_ramp = ExtResource( 3 )
 [sub_resource type="QuadMesh" id=108]
 size = Vector2( 0.5, 0.5 )
 
-[node name="Fire" type="Particles"]
+[node name="FireHint" type="Particles"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.09719, 0.688607, -0.00183094 )
 material_override = SubResource( 109 )
 cast_shadow = 0
 amount = 50
+lifetime = 1.5
+speed_scale = 0.1
 randomness = 0.74
 local_coords = false
 draw_order = 1
 process_material = SubResource( 107 )
 draw_pass_1 = SubResource( 108 )
 
-[node name="OmniLight" type="OmniLight" parent="."]
-light_color = Color( 1, 0.901961, 0.560784, 1 )
+[node name="OmniLight2" type="OmniLight" parent="."]
+light_color = Color( 1, 0.560784, 0.909804, 1 )
 light_energy = 2.0
 omni_range = 4.0
