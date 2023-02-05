@@ -57,10 +57,11 @@ func attemptDig(playerLocation):
 	SignalBus.emit_signal("dig_return", [hitSomething, oink])
 	
 	if hitSomething:
-		SignalBus.emit_signal("show_item_panel", nearestItem.texture, nearestItem.text)
-
-func project_to_x_z(vector3):
-	return Vector2(vector3.x, vector3.z)
+		show_item_panel(nearestItem.texture, nearestItem.text)
+		
+func show_item_panel(texture, text):
+	yield(get_tree().create_timer(1.625), "timeout")
+	SignalBus.emit_signal("show_item_panel", texture, text)
 	
 func get_x_z_distance(firstLocation, secondLocation):
 	var first2D = Vector2(firstLocation.x, firstLocation.z)
