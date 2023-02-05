@@ -36,16 +36,17 @@ func oink(distance):
 			return "oink..."
 
 func get_nearest_dig_point(playerLocation):
-	var closest
+	var closestPoint
+	var closestDistance = 100000
 	for point in get_children():
 		if point.get_class() != "DigPoint":
 			continue
 		
 		var itemLocation = point.global_translation
 		var distance = get_x_z_distance(playerLocation, itemLocation)
-		if closest == null or distance < closest:
-			closest = point
-	return closest
+		if closestPoint == null or distance < closestDistance:
+			closestPoint = point
+	return closestPoint
 	
 func attemptDig(playerLocation):
 	var nearestItem = get_nearest_dig_point(playerLocation)
