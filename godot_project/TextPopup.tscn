@@ -4,6 +4,7 @@
 [ext_resource path="res://TextPopup.gd" type="Script" id=2]
 
 [node name="Position2D" type="Position2D"]
+pause_mode = 2
 scale = Vector2( 0.3, 0.3 )
 script = ExtResource( 2 )
 
