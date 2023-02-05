@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://level/LevelGeometry.tscn" type="PackedScene" id=1]
 [ext_resource path="res://CameraAnchor.gd" type="Script" id=2]
@@ -15,6 +15,8 @@
 [ext_resource path="res://diggable_items/DigPoint.tscn" type="PackedScene" id=13]
 [ext_resource path="res://diggable_items/pixel_wand.png" type="Texture" id=14]
 [ext_resource path="res://diggable_items/unexploded bomb.png" type="Texture" id=15]
+[ext_resource path="res://diggable_items/crosleyrefrigerator.jpg" type="Texture" id=16]
+[ext_resource path="res://diggable_items/oilbarrel.jpg" type="Texture" id=17]
 [ext_resource path="res://OnScreenUI.gd" type="Script" id=20]
 [ext_resource path="res://Dig.gd" type="Script" id=21]
 [ext_resource path="res://font/TruffleCounterTextFont.tres" type="DynamicFont" id=24]
@@ -117,6 +119,16 @@ text = "Looking at this wand stirs a longing that you can't quite place."
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -42.2, 3.8, -26.9 )
 texture = ExtResource( 15 )
 text = "Unexploded ordinance. This would be disconcerting, if you weren't a pig. Since you are, and it doesn't have truffles in it, it isn't a very interesting find."
+
+[node name="DigPointRefrigirator" parent="Dig Points" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28.6421, 1.27846, -54.5932 )
+texture = ExtResource( 16 )
+text = "This appears to be a flyer for an old refrigerator advertisement from 1948. This fridge was one of the first models to use a chemical known as CFC, which was a potent greenhouse gas that decimated the ozone layer. Of course, you are a pig, and humanity is gone, so these details aren't very important. This doesn't look edible."
+
+[node name="DigPointOilBarrel" parent="Dig Points" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.0749, -0.406188, -40.1663 )
+texture = ExtResource( 17 )
+text = "Before you lies one of the greatest remnants of human folly - the cornerstone of industrial progress causing humanity to fly closer and closer towards the sun, inch by inch, until the self-induced heat waves melted them like wax. Unfortunately, these details don't matter to a pig looking for food. The barrel itself doesn't seem to be edible, but there are some small patches of non-poisonous mushrooms growing on the surface. You hungrily eat what you can."
 
 [node name="ItemPanel" type="PanelContainer" parent="."]
 pause_mode = 2
