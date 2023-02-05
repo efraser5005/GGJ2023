@@ -19,6 +19,7 @@ material/0 = SubResource( 101 )
 
 [node name="Branch" type="Sprite3D" parent="."]
 transform = Transform( 1, 7.45058e-09, 0, 7.45058e-09, 1, 1.49012e-08, 0, -1.49012e-08, 1.00001, 3.7983, 0.648726, 0.332272 )
+flip_h = true
 pixel_size = 0.025
 billboard = 2
 render_priority = 1
@@ -26,6 +27,7 @@ texture = ExtResource( 3 )
 
 [node name="Branch2" type="Sprite3D" parent="."]
 transform = Transform( 1, 2.23517e-08, 0, 4.84288e-08, 1, 1.3411e-07, 0, -1.49012e-08, 1.00001, 4.92286, 0.135718, 1.31069 )
+flip_h = true
 pixel_size = 0.025
 billboard = 2
 render_priority = 1
@@ -40,6 +42,7 @@ texture = ExtResource( 3 )
 
 [node name="Branch4" type="Sprite3D" parent="."]
 transform = Transform( 1, 2.23517e-08, -2.98023e-08, 8.56817e-08, 1, 2.5332e-07, 0, -1.49012e-08, 1.00001, -6.92314, -0.705354, 1.37133 )
+flip_h = true
 pixel_size = 0.025
 billboard = 2
 render_priority = 1
@@ -88,7 +91,7 @@ render_priority = 1
 texture = ExtResource( 6 )
 
 [node name="Branch9" type="Sprite3D" parent="."]
-transform = Transform( 1, 2.23517e-08, -1.19209e-07, 3.42727e-07, 1, 5.96046e-07, 0, -1.49012e-08, 1.00002, 5.0767, 0.045588, -1.55227 )
+transform = Transform( 1, 2.6077e-08, -2.38419e-07, 3.46452e-07, 1, 5.96046e-07, 8.9407e-08, -2.98023e-08, 1.00002, 5.0767, 0.0455885, -1.55227 )
 pixel_size = 0.025
 billboard = 2
 render_priority = 1
