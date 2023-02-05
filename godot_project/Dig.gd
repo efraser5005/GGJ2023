@@ -14,9 +14,9 @@ func stepDistance(distance):
 		return DISTANCE.HIT
 	elif distance < 4:
 		return DISTANCE.VERYCLOSE
-	elif distance < 12:
+	elif distance < 7:
 		return DISTANCE.CLOSE
-	elif distance < 20:
+	elif distance < 10:
 		return DISTANCE.DISTANT
 	else:
 		return DISTANCE.NOTHING
