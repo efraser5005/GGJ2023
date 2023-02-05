@@ -18,3 +18,6 @@ func _get_property_list():
 			type = TYPE_STRING
 		}
 	]
+
+func get_class():
+	return "DigPoint"

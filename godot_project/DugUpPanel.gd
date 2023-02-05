@@ -30,8 +30,8 @@ func _on_KeepDiggingButton_pressed():
 
 
 func set_panel_contents(object_texture, object_text):
-	$VBoxContainer/ItemImage.texture = object_texture
-	$VBoxContainer/ItemTextLabel.text = object_text
+	$VBoxContainer/HBoxContainer/ItemImage.texture = object_texture
+	$VBoxContainer/HBoxContainer/ItemTextLabel.text = object_text
 	
 	
 func show_item_panel(object_texture, object_text):

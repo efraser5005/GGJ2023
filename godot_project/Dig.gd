@@ -33,35 +33,36 @@ func oink(distance):
 		DISTANCE.NOTHING:
 			return "oink..."
 
-func get_nearest_dig_point(location):
+func get_nearest_dig_point(playerLocation):
 	var closest
 	for point in get_children():
 		if point.get_class() != "DigPoint":
 			continue
 		
-		var translate = point.global_translation
-		var translate2d = project_to_x_z(translate)
-		var distance = location.distance_to(translate2d)
+		var itemLocation = point.global_translation
+		var distance = get_x_z_distance(playerLocation, itemLocation)
 		if closest == null or distance < closest:
 			closest = point
 	return closest
 	
 func attemptDig(playerLocation):
-	var playerLocation2D = project_to_x_z(playerLocation)
-	var nearest = get_nearest_dig_point(playerLocation2D)
-	if nearest == null:
+	var nearestItem = get_nearest_dig_point(playerLocation)
+	if nearestItem == null:
 		return
 	
-	var distance = playerLocation2D.distance_to(
-		project_to_x_z(nearest.global_translation)
-	)
+	var distance = get_x_z_distance(playerLocation, nearestItem.global_translation)
 	
 	var oink = oink(distance)
 	var hitSomething = stepDistance(distance) == DISTANCE.HIT
 	SignalBus.emit_signal("dig_return", [hitSomething, oink])
 	
 	if hitSomething:
-		SignalBus.emit_signal("show_item_panel", nearest.texture, nearest.text)
+		SignalBus.emit_signal("show_item_panel", nearestItem.texture, nearestItem.text)
 
 func project_to_x_z(vector3):
 	return Vector2(vector3.x, vector3.z)
+	
+func get_x_z_distance(firstLocation, secondLocation):
+	var first2D = Vector2(firstLocation.x, firstLocation.z)
+	var second2D = Vector2(secondLocation.x, secondLocation.z)
+	return first2D.distance_to(second2D)
