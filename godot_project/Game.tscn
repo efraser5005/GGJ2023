@@ -14,8 +14,9 @@ script = ExtResource( 3 )
 pause_mode = 2
 
 [node name="MusicAmbience" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
 stream = ExtResource( 4 )
-volume_db = -5.701
+volume_db = -15.286
 autoplay = true
 mix_target = 1
 

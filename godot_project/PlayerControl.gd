@@ -69,8 +69,8 @@ func determine_heading():
 func dig(params):
 	var canDig = params[0]
 	var oinkMsg = params[1]
-	print("oink!")
-	SignalBus.emit_signal("show_dig_txt", get_viewport().size / 2, oinkMsg)
+	print(oinkMsg)
+	SignalBus.emit_signal("show_dig_txt", oinkMsg)
 
 func _input(event):
 	if is_jumping:

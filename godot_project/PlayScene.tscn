@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://level/LevelGeometry.tscn" type="PackedScene" id=1]
 [ext_resource path="res://CameraAnchor.gd" type="Script" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://diggable_items/unexploded bomb.png" type="Texture" id=15]
 [ext_resource path="res://diggable_items/crosleyrefrigerator.jpg" type="Texture" id=16]
 [ext_resource path="res://diggable_items/oilbarrel.jpg" type="Texture" id=17]
+[ext_resource path="res://MusicChangeTrigger.gd" type="Script" id=18]
 [ext_resource path="res://OnScreenUI.gd" type="Script" id=20]
 [ext_resource path="res://Dig.gd" type="Script" id=21]
 [ext_resource path="res://font/TruffleCounterTextFont.tres" type="DynamicFont" id=24]
@@ -37,7 +38,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.64089, 0 )
 axis_lock_angular_x = true
 axis_lock_angular_y = true
 axis_lock_angular_z = true
-linear_damp = 0.588
+linear_damp = 1.0
 script = ExtResource( 3 )
 
 [node name="CameraAnchor" type="Spatial" parent="Player"]
@@ -110,10 +111,13 @@ text = "Truffles. Sometimes, you actually find what you're looking for."
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -31.6032, 3.0756, -38.596 )
 text = "Truffles! Once, humans would have used you to find these delicacies. Now, they're all yours!"
 
-[node name="DigTruffles6" parent="Dig Points" instance=ExtResource( 13 )]
+[node name="DigWand" parent="Dig Points" instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -38.9189, 3.44788, -60.9976 )
 texture = ExtResource( 14 )
 text = "Looking at this wand stirs a longing that you can't quite place."
+
+[node name="MusicChangeTrigger" type="Node" parent="Dig Points/DigWand"]
+script = ExtResource( 18 )
 
 [node name="DigPointUnexplodedBomb" parent="Dig Points" instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -42.2, 3.8, -26.9 )
