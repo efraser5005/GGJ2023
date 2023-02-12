@@ -61,6 +61,7 @@ theme = ExtResource( 2 )
 text = "Quit"
 
 [node name="PigHeadShot" type="TextureRect" parent="."]
+visible = false
 margin_left = 601.0
 margin_top = 79.0
 margin_right = 2005.0

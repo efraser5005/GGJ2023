@@ -91,7 +91,7 @@ text = "Ah yes, truffles - your favorite food and a miraculous survivor of the c
 [node name="DigPointPorco2" parent="Dig Points" instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.37899, -0.733858, 11.7483 )
 texture = ExtResource( 7 )
-text = "A subtle yet evocative painting of a farmer and his daughter standing in front of a Carpenter Gothic house. Something seems to be off about it, but you can't tell what. Unfortunately, it is also inedible."
+text = "[  ...  ]"
 
 [node name="DigPointCoolBug" parent="Dig Points" instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.8631, -0.733858, 25.465 )

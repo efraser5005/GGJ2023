@@ -3,6 +3,10 @@ const PlayScene = preload("res://PlayScene.tscn")
 
 
 func _on_MainMenu_new_game():
+	var opening_bg = get_node("OpeningBg")
+	if opening_bg:
+		opening_bg.queue_free()
+		
 	var existing_scene = get_node("PlayScene")
 	if existing_scene:
 		existing_scene.queue_free()
